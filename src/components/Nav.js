@@ -23,7 +23,7 @@ const nav = () => {
     return (
         <Router>
 
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="sticky-top">
                 <Navbar.Brand className="name font-weight-bold" as={Link} to="/">Henry Herrera <span role="img" aria-label="computer emoji">&#128187;</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

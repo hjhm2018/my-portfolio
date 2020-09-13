@@ -17,7 +17,7 @@ export default class MyForm extends React.Component {
     const { status } = this.state;
     return (
         <>
-      <form className="text-center border rounded col-lg-5 mx-auto mb-3 pt-3 pb-3 bg-dark text-light mt-5"
+      <form className="text-center border rounded col-lg-5 mx-auto mb-3 pb-3 bg-dark text-light mt-2"
         onSubmit={this.submitForm}
         action="https://formspree.io/xoqkgkpd"
         method="POST"
@@ -44,7 +44,7 @@ export default class MyForm extends React.Component {
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>
 
-      <div className="col-lg-12 text-center">
+      <div className="col-lg-12 text-center mb-5 pb-5">
             <button onClick={this.props.hide} className="btn btn-danger">Go back</button>
       </div>
 

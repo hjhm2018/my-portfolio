@@ -30,7 +30,7 @@ function Contact() {
             </div>
             <p className="col-lg-12 text-center"><button className=" btn btn-info" onClick={reloadPage}>Click   me if you don't see the badge</button></p>
 
-            <div className="col-lg-12 mt-4 mb-5 text-center">
+            <div className="col-lg-12 mt-1 mb-5 text-center">
                 <button onClick={buttonShow} class="btn btn-success">Send a message</button>
             </div>
         </div>
