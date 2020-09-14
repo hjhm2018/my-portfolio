@@ -80,6 +80,8 @@ function About() {
         <p>I just finished a diploma program in Web and Mobile Applications Development at Cornerstone
             International Community
             College of Canada, and am currently looking for full-time job as a web developer.</p>
+        <p>The web technologies, programming languages, libraries, frameworks, CMS and databases that I have used include: HTML5, CSS, SASS, JavaScript, jQuery, Bootstrap, ReactJS, AngularJS, NodeJS, MongoDB, Unity, PHP & MySQL, WordPress, GatsbyJS, and Contentful.</p>
+        <p>This portfolio was built using exclusively ReactJS, but there is a version of this portfolio deployed at GitHub that was created using HTML, CSS, JavaScript and Bootstrap. You can visit that version of this portolio <a href="https://hjhm2018.github.io/" target="_blank" rel="noopener noreferrer">here</a>.</p>
     </div>
     <div className="col-lg-2"></div>
     <div className="col-lg-12 text-center mb-2">
@@ -97,7 +99,7 @@ function About() {
     :
     <div className="col-sm-12 col-lg-10 text-center mx-auto mb-5">
         <iframe title="Resume" width="80%" height="480"
-            src="https://drive.google.com/file/d/1qDLRjsxx8rJqx4K7lc_kZBD7UIh57ebw/preview"></iframe>
+            src="https://drive.google.com/file/d/1LZvVoD5i4dcXfRpwTt_5uU5Omk2Dzkb0/preview"></iframe>
     </div> 
     }
     
