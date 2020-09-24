@@ -35,7 +35,7 @@ const nav = () => {
                         <Nav.Link as={Link} to="/experience" eventKey={2}>Experience</Nav.Link>
                         <Nav.Link as={Link} to="/projects" eventKey={2}>Projects</Nav.Link>
                         <Nav.Link as={Link} to="/contact" eventKey={2}>Contact</Nav.Link>
-                        <Nav.Link as={Link} to="/earthquakeapp" eventKey={2}>Earthquake</Nav.Link>
+                        <Nav.Link className="d-none" as={Link} to="/earthquakeapp" eventKey={2}>Earthquake</Nav.Link>
                         {/* <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'linkedin']} /></Nav.Link>
                         <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'github']} /></Nav.Link> */}
                         <a className="text-light p-2" href="http://linkedin.com/in/herrerahenry" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
