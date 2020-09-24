@@ -14,7 +14,7 @@ import Contact from "./Contact"
 import Education from "./Education"
 import Experience from "./Experience"
 import Projects from "./Projects"
-
+import Earthquake from "./Earthquake"
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -35,6 +35,7 @@ const nav = () => {
                         <Nav.Link as={Link} to="/experience" eventKey={2}>Experience</Nav.Link>
                         <Nav.Link as={Link} to="/projects" eventKey={2}>Projects</Nav.Link>
                         <Nav.Link as={Link} to="/contact" eventKey={2}>Contact</Nav.Link>
+                        <Nav.Link as={Link} to="/earthquakeapp" eventKey={2}>Earthquake</Nav.Link>
                         {/* <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'linkedin']} /></Nav.Link>
                         <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'github']} /></Nav.Link> */}
                         <a className="text-light p-2" href="http://linkedin.com/in/herrerahenry" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
@@ -61,6 +62,9 @@ const nav = () => {
           </Route>
           <Route path="/projects">
             <Projects />
+          </Route>
+          <Route path="/earthquakeapp">
+            <Earthquake />
           </Route>
           <Route path="/">
             <Home />

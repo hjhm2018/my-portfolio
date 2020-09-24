@@ -11,6 +11,14 @@ import blog2 from '../images/blog2.png'
 import appImage from '../images/app.jpeg'
 import impactraction from '../images/impactraction.JPG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    Link
+  } from "react-router-dom";
+
+// import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+
+
 
 const Projects = () => {
     
@@ -72,6 +80,8 @@ const Projects = () => {
 
             <div className="col-lg-12 mt-5 text-center">
                 <p>You can also take a look at my GitHub repositories: <a className="text-dark p-2" href="http://github.com/hjhm2018" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']} /></a></p>
+                <p>Here is a project example: </p>
+                <Nav.Link className="btn btn-primary mb-5 col-4 mx-auto" as={Link} to="/earthquakeapp" eventKey={2}>Earthquake Counter App</Nav.Link>
             </div>   
         </div>
     )
