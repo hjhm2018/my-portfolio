@@ -58,7 +58,7 @@ export class Weather extends Component {
                         <p><span className="font-weight-bold">Max. Temp: </span> {this.state.weatherData.data.main.temp_max} ºC</p>
                         <p><span className="font-weight-bold">Min. Temp: </span>{this.state.weatherData.data.main.temp_min} ºC</p>
                     </>
-                    : "Nothing"
+                    : "Enter City Name"
                 }
             </div>
         )
