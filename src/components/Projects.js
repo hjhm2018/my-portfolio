@@ -11,9 +11,7 @@ import blog2 from '../images/blog2.png'
 import appImage from '../images/app.jpeg'
 import impactraction from '../images/impactraction.JPG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -84,8 +82,6 @@ const Projects = () => {
                 <Nav.Link className="btn btn-primary mb-2 col-4 mx-auto" as={Link} to="/earthquakeapp" eventKey={2}>Earthquake Counter App</Nav.Link>
                 <Nav.Link className="btn btn-primary mb-2 col-4 mx-auto" as={Link} to="/weatherapp" eventKey={2}>Weather App</Nav.Link>
                 <Nav.Link className="btn btn-primary mb-5 col-4 mx-auto" as={Link} to="/reactfilter" eventKey={2}>React Filter by Name</Nav.Link>
-
-                
             </div>   
         </div>
     )

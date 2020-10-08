@@ -32,7 +32,6 @@ const nav = () => {
                     <Nav className="ml-auto">
                         <Nav.Link as={Link} to="/" eventKey={2}>Home</Nav.Link>
                         <Nav.Link as={Link} to="/about" eventKey={2}>About</Nav.Link>
-                        
                         <Nav.Link as={Link} to="/education" eventKey={2}>Education</Nav.Link>
                         <Nav.Link as={Link} to="/experience" eventKey={2}>Experience</Nav.Link>
                         <Nav.Link as={Link} to="/projects" eventKey={2}>Projects</Nav.Link>
