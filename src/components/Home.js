@@ -28,16 +28,28 @@ function Home() {
 									International Community College of Canada in Vancouver.</p>
 								<p>I am currently looking for a full-time position as a Web Developer!</p>
 								<p className="mb-5">If you know about an opportunity, please reach out to me!</p>
-                                <Nav.Link className="btn btn-dark col-4 ml-auto mt-5" as={Link} to="/about" eventKey={2}>More about me...</Nav.Link>
+                                <Nav.Link className="btn btn-dark col-lg-4 col-md-8 col-8 ml-auto mt-5" as={Link} to="/about" eventKey={2}>More about me...</Nav.Link>
                     </Card.Text>
                     </Card.Body>
                 </div>
             </div>
     </Card>
-
-    
-        
+    <div className="row mt-3 mb-5">
+        <div className="col-sm-12 col-md-3 mb-1">
+            <Nav.Link className="btn btn-dark" as={Link} to="/education" eventKey={2}>Education</Nav.Link>
         </div>
+        <div className="col-sm-12 col-md-3 mb-1">
+            <Nav.Link className="btn btn-dark" as={Link} to="/experience" eventKey={2}>Experience</Nav.Link>
+        </div>
+        <div className="col-sm-12 col-md-3 mb-1">
+            <Nav.Link className="btn btn-dark" as={Link} to="/projects" eventKey={2}>Projects</Nav.Link>
+        </div>
+        <div className="col-sm-12 col-md-3 mb-5">
+            <Nav.Link className="btn btn-dark" as={Link} to="/contact" eventKey={2}>Contact</Nav.Link>
+        </div>
+    </div>
+
+    </div>
     )
 }
 
