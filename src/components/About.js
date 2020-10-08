@@ -99,7 +99,7 @@ function About() {
     :
     <div className="col-sm-12 col-lg-10 text-center mx-auto mb-5">
         <iframe title="Resume" width="80%" height="480"
-            src="https://drive.google.com/file/d/1LZvVoD5i4dcXfRpwTt_5uU5Omk2Dzkb0/preview"></iframe>
+            src="https://drive.google.com/file/d/1k0pGPw5hl_ME0mc_b7OWDY-LI5HwFBwR/preview"></iframe>
     </div> 
     }
     
