@@ -159,6 +159,8 @@ function Education() {
             </Card>
             
             </Accordion>
+            <div className="pb-5 mt-5 mb-5 invisible">This is an invisible container</div>
+            
             </div>
     )
 }
