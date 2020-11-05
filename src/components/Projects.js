@@ -81,7 +81,8 @@ const Projects = () => {
                 <p>Here are some of my project examples: </p>
                 <Nav.Link className="btn btn-primary mb-2 col-8 col-md-4 mx-auto" as={Link} to="/earthquakeapp" eventKey={2}>Earthquake Counter App</Nav.Link>
                 <Nav.Link className="btn btn-primary mb-2 col-8 col-md-4 mx-auto" as={Link} to="/weatherapp" eventKey={2}>Weather App</Nav.Link>
-                <Nav.Link className="btn btn-primary mb-5 col-8 col-md-4 mx-auto" as={Link} to="/reactfilter" eventKey={2}>React Filter by Name</Nav.Link>
+                <Nav.Link className="btn btn-primary mb-2 col-8 col-md-4 mx-auto" as={Link} to="/reactfilter" eventKey={2}>React Filter by Name</Nav.Link>
+                <Nav.Link className="btn btn-primary mb-5 col-8 col-md-4 mx-auto" as={Link} to="/bmicalculator" eventKey={2}>Calculate Body Mass Index</Nav.Link>
             </div>
         <div className="pb-5 mt-5 mb-5 invisible">This is an invisible container</div>
 

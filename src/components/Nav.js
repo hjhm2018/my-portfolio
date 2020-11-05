@@ -17,6 +17,7 @@ import Projects from "./Projects"
 import Earthquake from "./Earthquake"
 import Weather from "./Weather"
 import ReactFilter from "./ReactFilter"
+import Imc from "./Imc"
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -39,6 +40,8 @@ const nav = () => {
                         <Nav.Link className="d-none" as={Link} to="/earthquakeapp" eventKey={2}>Earthquake</Nav.Link>
                         <Nav.Link className="d-none" as={Link} to="/weatherapp" eventKey={2}>Weather</Nav.Link>
                         <Nav.Link className="d-none" as={Link} to="/reactfilter" eventKey={2}>React Filter</Nav.Link>
+                        <Nav.Link className="d-none" as={Link} to="/bmicalculator" eventKey={2}> BMI Calculator</Nav.Link>
+
 
                         {/* <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'linkedin']} /></Nav.Link>
                         <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'github']} /></Nav.Link> */}
@@ -75,6 +78,9 @@ const nav = () => {
           </Route>
           <Route path="/reactfilter">
             <ReactFilter />
+          </Route>
+          <Route path="/bmicalculator">
+            <Imc />
           </Route>
           <Route path="/">
             <Home />
