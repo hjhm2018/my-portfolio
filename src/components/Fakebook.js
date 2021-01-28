@@ -1,9 +1,15 @@
+import React from "react";
 import { Card, Form, Button } from "react-bootstrap";
 import profilePicture from "../images/profile-picture.jpeg";
 import { useState, useEffect } from "react";
-import { MdCheckCircle, MdSend, MdFavoriteBorder } from "react-icons/md";
-
-import React from "react";
+import {
+  MdCheckCircle,
+  MdSend,
+  MdFavorite,
+  MdDelete,
+  MdDirectionsRun,
+  MdSupervisorAccount,
+} from "react-icons/md";
 
 import styles from "../Style.module.css";
 
@@ -44,7 +50,14 @@ function Fakebook() {
 
     setMessage("");
 
-    console.log(messagesList);
+    // console.log(messagesList);
+  };
+
+  const deletePost = (id) => {
+    let newMessageList = messagesList.filter((message) => message.id !== id);
+    // console.log(newMessageList);
+    console.log(id);
+    setMessagesList(newMessageList);
   };
 
   useEffect(() => {
@@ -122,11 +135,16 @@ function Fakebook() {
               </Card.Title>
               <Card.Text>I just write fake news.</Card.Text>
               <Card.Text>
-                <span className="font-weight-bold">Friends:</span> Infinite
+                <span className="font-weight-bold">
+                  <MdSupervisorAccount /> Friends:
+                </span>{" "}
+                Infinite
               </Card.Text>
               <Card.Text>
-                <span className="font-weight-bold">Followers:</span> Infinite -
-                1
+                <span className="font-weight-bold">
+                  <MdDirectionsRun /> Followers:
+                </span>{" "}
+                Infinite - 1
               </Card.Text>
             </Card.Body>
           </Card>
@@ -164,7 +182,15 @@ function Fakebook() {
                   <p>{message.message}</p>
                   <div className="col-12 d-flex">
                     <div className="col-6">
-                      <MdFavoriteBorder></MdFavoriteBorder>
+                      <MdFavorite className={styles.like} />
+                      &nbsp;
+                      <MdDelete
+                        title="delete"
+                        className={styles.button}
+                        onClick={() => {
+                          deletePost(message.id);
+                        }}
+                      />
                     </div>
                     <div className="text-right text-secondary font-italic col-6">
                       {message.current_date}

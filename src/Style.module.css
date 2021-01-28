@@ -7,3 +7,17 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+.button,
+.like {
+  cursor: pointer;
+}
+
+.button:hover,
+.like {
+  color: grey;
+}
+
+.like:hover {
+  color: red;
+}
