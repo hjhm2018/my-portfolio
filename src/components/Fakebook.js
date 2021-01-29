@@ -49,15 +49,24 @@ function Fakebook() {
     setMessagesList((messagesList) => [messageObject, ...messagesList]);
 
     setMessage("");
-
-    // console.log(messagesList);
   };
 
   const deletePost = (id) => {
     let newMessageList = messagesList.filter((message) => message.id !== id);
-    // console.log(newMessageList);
-    console.log(id);
     setMessagesList(newMessageList);
+  };
+
+  const likePost = (id) => {
+    let post = messagesList.find((post) => post.id === id);
+
+    setMessagesList(
+      messagesList.map((item) => {
+        if (item.id === id) {
+          return { ...item, like: !post.like };
+        }
+        return item;
+      })
+    );
   };
 
   useEffect(() => {
@@ -116,7 +125,10 @@ function Fakebook() {
     <div className="container">
       <div className="row d-flex">
         <div className={`col-12 text-center font-weight-bold ${styles.title}`}>
-          FakeBook
+          FakeBook{" "}
+          <small style={{ fontStyle: "italic" }}>
+            Just a hilarious social network
+          </small>
         </div>
         <div className="col-md-3 col-sm-12 text-center">
           <Card className="w-100 p-2">
@@ -172,7 +184,7 @@ function Fakebook() {
               onClick={addPost}
               disabled={message.length > 150 || (message.length === 0 && true)}
             >
-              Post <MdSend></MdSend>
+              Post <MdSend />
             </Button>
           </Form>
           <div className="col-12">
@@ -182,7 +194,16 @@ function Fakebook() {
                   <p>{message.message}</p>
                   <div className="col-12 d-flex">
                     <div className="col-6">
-                      <MdFavorite className={styles.like} />
+                      <MdFavorite
+                        className={`${
+                          message.like
+                            ? `text-danger ${styles.like}`
+                            : `text-secondary ${styles.like}`
+                        }`}
+                        onClick={(e) => {
+                          likePost(message.id);
+                        }}
+                      />
                       &nbsp;
                       <MdDelete
                         title="delete"
