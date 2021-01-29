@@ -13,8 +13,8 @@ import {
 
 import styles from "../Style.module.css";
 
-function Fakebook() {
-  const name = "FakeBook Bot";
+function Fakenews() {
+  const name = "FakeNews Bot";
 
   const messages = [
     {
@@ -125,7 +125,7 @@ function Fakebook() {
     <div className="container">
       <div className="row d-flex">
         <div className={`col-12 text-center font-weight-bold ${styles.title}`}>
-          FakeBook{" "}
+          FakeNews{" "}
           <small style={{ fontStyle: "italic" }}>
             Just a hilarious social network
           </small>
@@ -232,4 +232,4 @@ function Fakebook() {
   );
 }
 
-export default Fakebook;
+export default Fakenews;

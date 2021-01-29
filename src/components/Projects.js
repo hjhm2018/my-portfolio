@@ -109,10 +109,10 @@ const Projects = () => {
         <Nav.Link
           className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
           as={Link}
-          to="/fakebook"
+          to="/fakenews"
           eventKey={2}
         >
-          Fakebook
+          FakeNews
         </Nav.Link>
         <Nav.Link
           className="btn btn-primary mb-5 col-8 col-md-4 mx-auto"

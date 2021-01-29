@@ -13,7 +13,7 @@ import Earthquake from "./Earthquake";
 import Weather from "./Weather";
 import ReactFilter from "./ReactFilter";
 import Imc from "./Imc";
-import Fakebook from "./Fakebook";
+import Fakenews from "./Fakenews";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -88,8 +88,8 @@ const nav = () => {
               {" "}
               BMI Calculator
             </Nav.Link>
-            <Nav.Link className="d-none" as={Link} to="/fakebook" eventKey={2}>
-              Fakebook
+            <Nav.Link className="d-none" as={Link} to="/fakenews" eventKey={2}>
+              Fakenews
             </Nav.Link>
 
             {/* <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'linkedin']} /></Nav.Link>
@@ -141,8 +141,8 @@ const nav = () => {
         <Route path="/bmicalculator">
           <Imc />
         </Route>
-        <Route path="/fakebook">
-          <Fakebook />
+        <Route path="/fakenews">
+          <Fakenews />
         </Route>
         <Route path="/">
           <Home />
