@@ -51,7 +51,7 @@ function Imc() {
 
   return (
     <div className="text-center">
-      <h2 className="mt-3 pt-2">
+      <h2 className="mt-3 pt-2 bg-dark text-light col-md-8 col-sm-12 mx-auto p-3 rounded font-italic">
         <span role="img" aria-label="lifting weight emoji">
           &#128170;
         </span>{" "}
@@ -100,7 +100,7 @@ function Imc() {
         </tbody>
       </table>
 
-      <label htmlFor="height">
+      <label className="font-weight-bold" htmlFor="height">
         Height:{" "}
         <input
           className="text-center"
@@ -111,7 +111,7 @@ function Imc() {
         cm
       </label>
       <br />
-      <label htmlFor="weight">
+      <label className="font-weight-bold" htmlFor="weight">
         Weight:{" "}
         <input
           className="text-center"
