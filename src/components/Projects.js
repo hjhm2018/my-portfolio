@@ -115,6 +115,14 @@ const Projects = () => {
           FakeNews
         </Nav.Link>
         <Nav.Link
+          className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
+          as={Link}
+          to="/birthday"
+          eventKey={2}
+        >
+          Birthday Reminder App
+        </Nav.Link>
+        <Nav.Link
           className="btn btn-primary mb-5 col-8 col-md-4 mx-auto"
           as={Link}
           to="/bmicalculator"

@@ -1,0 +1,35 @@
+.birthdayBackground {
+  background: url("./images/birthday.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bodyBackground {
+  background: url("./images/body-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.cursor:hover {
+  background-color: black;
+  color: white;
+}
+
+.title {
+  font-family: "Lobster", cursive;
+  color: white;
+}
+
+.name {
+  width: 170px;
+}
+
+.day {
+  width: 50px;
+}
