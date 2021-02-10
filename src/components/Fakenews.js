@@ -73,40 +73,40 @@ function Fakenews() {
     let [month, date, year] = new Date().toLocaleDateString("en-US").split("/");
 
     switch (month) {
-      case 1:
+      case "1":
         month = "January";
         break;
-      case 2:
+      case "2":
         month = "February";
         break;
-      case 3:
+      case "3":
         month = "March";
         break;
-      case 4:
+      case "4":
         month = "April";
         break;
-      case 5:
+      case "5":
         month = "May";
         break;
-      case 6:
+      case "6":
         month = "June";
         break;
-      case 7:
+      case "7":
         month = "July";
         break;
-      case 8:
+      case "8":
         month = "August";
         break;
-      case 9:
+      case "9":
         month = "September";
         break;
-      case 10:
+      case "10":
         month = "October";
         break;
-      case 11:
+      case "11":
         month = "November";
         break;
-      case 12:
+      case "12":
         month = "December";
         break;
       default:
@@ -124,7 +124,9 @@ function Fakenews() {
   return (
     <div className="container">
       <div className="row d-flex">
-        <div className={`col-12 text-center font-weight-bold ${styles.title}`}>
+        <div
+          className={`col-12 text-center font-weight-bold mt-1 ${styles.title}`}
+        >
           FakeNews{" "}
           <small style={{ fontStyle: "italic" }}>
             Just a hilarious social network
