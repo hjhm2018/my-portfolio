@@ -8,7 +8,7 @@ export class ReactFilter extends Component {
 
   onChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value.toLowerCase(),
     });
     console.log(e.target.name);
   };

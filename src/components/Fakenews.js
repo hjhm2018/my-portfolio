@@ -176,6 +176,7 @@ function Fakenews() {
                 onChange={onChange}
                 as="textarea"
                 value={message}
+                maxLength="150"
                 placeholder="Write whatever you want..."
                 className={`${message.length > 150 && "border border-danger"}`}
               />

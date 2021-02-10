@@ -5,6 +5,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 
+import Modal from "react-bootstrap/Modal";
+
 import styles from "../Birthday.module.css";
 
 import { MdAddCircleOutline, MdCake, MdDelete } from "react-icons/md";
@@ -26,6 +28,22 @@ function BirthdayApp() {
   const [year, setYear] = useState("");
   const [birthdayList, setBirthdayList] = useState(getSessionStorage());
   const [birthdayObject, setBirthdayObject] = useState({});
+
+  //Birthday added
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => {
+    setShow(false);
+    window.location.reload();
+  };
+  const handleShow = () => setShow(true);
+
+  // Clear Storage Warning
+  const [clearStorageWarning, setClearStorageWarning] = useState(false);
+  const closeWarning = () => setClearStorageWarning(false);
+
+  // Clear Storage Success
+  const [clearStorageSuccess, setClearStorageSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -83,6 +101,7 @@ function BirthdayApp() {
 
   const addBirthday = () => {
     setBirthdayList((birthdayList) => [...birthdayList, birthdayObject]);
+    handleShow();
   };
 
   const deleteDate = (id) => {
@@ -91,7 +110,14 @@ function BirthdayApp() {
   };
 
   const deleteStorage = () => {
-    sessionStorage.clear();
+    closeWarning();
+    setClearStorageSuccess(true);
+
+    setTimeout(() => {
+      sessionStorage.clear();
+      setClearStorageSuccess(false);
+      window.location.reload();
+    }, 3000);
   };
 
   useEffect(() => {
@@ -107,6 +133,64 @@ function BirthdayApp() {
   useEffect(() => {
     sessionStorage.setItem("list", JSON.stringify(birthdayList));
   }, [birthdayList]);
+
+  if (show) {
+    return (
+      <div>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Success!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>The birthday date was added successfully.</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Ok
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
+    );
+  }
+
+  if (clearStorageWarning) {
+    return (
+      <div>
+        <Modal show={clearStorageWarning} onHide={closeWarning}>
+          <Modal.Header closeButton>
+            <Modal.Title>Warning!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>Are you sure you want to delete all the saved data?</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={closeWarning}>
+              No
+            </Button>
+            <Button variant="danger" onClick={deleteStorage}>
+              Yes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
+    );
+  }
+
+  if (clearStorageSuccess) {
+    return (
+      <div>
+        <Modal show={clearStorageSuccess} onHide={deleteStorage}>
+          <Modal.Header closeButton>
+            <Modal.Title>Success!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>All data has been deleted!</p>
+          </Modal.Body>
+        </Modal>
+      </div>
+    );
+  }
 
   return (
     <div className={`container mb-5 ${styles.bodyBackground} pb-5`}>
@@ -127,6 +211,7 @@ function BirthdayApp() {
                 </Form.Label>
                 <Form.Control
                   id="inlineFormInputName"
+                  maxLength="20"
                   placeholder="Name"
                   value={name}
                   className="text-center"
@@ -926,7 +1011,7 @@ function BirthdayApp() {
       </p>
       <button
         className="btn btn-danger mx-auto d-block"
-        onClick={deleteStorage}
+        onClick={() => setClearStorageWarning(true)}
       >
         Clear storage
       </button>
