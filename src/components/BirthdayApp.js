@@ -9,7 +9,13 @@ import Modal from "react-bootstrap/Modal";
 
 import styles from "../Birthday.module.css";
 
-import { MdAddCircleOutline, MdCake, MdDelete } from "react-icons/md";
+import {
+  MdAddCircleOutline,
+  MdCake,
+  MdDelete,
+  MdReportProblem,
+  MdCheckCircle,
+} from "react-icons/md";
 
 const getSessionStorage = () => {
   let list = sessionStorage.getItem("list");
@@ -138,8 +144,10 @@ function BirthdayApp() {
     return (
       <div>
         <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Success!</Modal.Title>
+          <Modal.Header className="bg-success" closeButton>
+            <Modal.Title className="text-white">
+              Success! <MdCheckCircle />
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <p>The birthday date was added successfully.</p>
@@ -158,8 +166,11 @@ function BirthdayApp() {
     return (
       <div>
         <Modal show={clearStorageWarning} onHide={closeWarning}>
-          <Modal.Header closeButton>
-            <Modal.Title>Warning!</Modal.Title>
+          <Modal.Header className="bg-danger" closeButton>
+            <Modal.Title className="text-white">
+              <MdReportProblem />
+              Warning!
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <p>Are you sure you want to delete all the saved data?</p>
@@ -181,8 +192,10 @@ function BirthdayApp() {
     return (
       <div>
         <Modal show={clearStorageSuccess} onHide={deleteStorage}>
-          <Modal.Header closeButton>
-            <Modal.Title>Success!</Modal.Title>
+          <Modal.Header className="bg-success" closeButton>
+            <Modal.Title className="text-white">
+              Success! <MdCheckCircle />
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <p>All data has been deleted!</p>

@@ -106,6 +106,8 @@ function Imc() {
           className="text-center"
           id="height"
           type="number"
+          min="0"
+          max="250"
           onChange={setHeightValue}
         />{" "}
         cm
@@ -118,23 +120,45 @@ function Imc() {
           id="weight"
           type="number"
           onChange={setWeightValue}
+          min="0"
+          max="300"
         />{" "}
         Kg
       </label>
       <br />
       <span>
-        BMI:{" "}
+        <b>BMI:</b>{" "}
         {weight !== 0 &&
         weight !== "" &&
         weight &&
         height !== 0 &&
         height !== "" &&
-        height
+        height &&
+        weight > 0 &&
+        height > 0
           ? imc.bmi
           : ""}{" "}
       </span>
       <br />
-      <button className="btn btn-primary m-2" onClick={addBMI}>
+
+      {(height < 0 || weight < 0) && (
+        <span className="text-danger">No negative values</span>
+      )}
+      <br />
+      <button
+        className="btn btn-primary m-2"
+        onClick={addBMI}
+        disabled={
+          weight === 0 ||
+          weight === "" ||
+          height === 0 ||
+          height === "" ||
+          weight < 0 ||
+          height < 0 ||
+          !height ||
+          !weight
+        }
+      >
         Save Result
       </button>
       {/* Messages */}
