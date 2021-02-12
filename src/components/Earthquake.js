@@ -336,13 +336,24 @@ const Earthquake = () => {
         </label>
       </div>
 
+      {minMagnitude && maxMagnitude && minMagnitude > maxMagnitude && (
+        <small className="text-danger">
+          Max. magnitude must be higher than Min. Magnitude
+        </small>
+      )}
+
       <br />
 
       <button
         className="btn btn-primary p-2"
         onClick={() => onClick()}
         disabled={
-          !startDate || !endDate || !minMagnitude || !maxMagnitude || !country
+          !startDate ||
+          !endDate ||
+          !minMagnitude ||
+          !maxMagnitude ||
+          !country ||
+          minMagnitude > maxMagnitude
         }
       >
         Search
