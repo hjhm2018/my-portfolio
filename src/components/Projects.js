@@ -123,6 +123,14 @@ const Projects = () => {
           Birthday Reminder App
         </Nav.Link>
         <Nav.Link
+          className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
+          as={Link}
+          to="/crytocurrencyapp"
+          eventKey={2}
+        >
+          Cryptocurrencies Price App
+        </Nav.Link>
+        <Nav.Link
           className="btn btn-primary mb-5 col-8 col-md-4 mx-auto"
           as={Link}
           to="/bmicalculator"

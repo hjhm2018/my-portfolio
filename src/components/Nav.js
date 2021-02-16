@@ -15,6 +15,7 @@ import ReactFilter from "./ReactFilter";
 import Imc from "./Imc";
 import Fakenews from "./Fakenews";
 import BirthdayApp from "./BirthdayApp";
+import CryptocurrencyApp from "./CryptocurrencyApp";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -95,6 +96,14 @@ const nav = () => {
             <Nav.Link className="d-none" as={Link} to="/birthday" eventKey={2}>
               BirthdayApp
             </Nav.Link>
+            <Nav.Link
+              className="d-none"
+              as={Link}
+              to="/crytocurrencyapp"
+              eventKey={2}
+            >
+              CryptocurrencyApp
+            </Nav.Link>
 
             {/* <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'linkedin']} /></Nav.Link>
                         <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'github']} /></Nav.Link> */}
@@ -150,6 +159,9 @@ const nav = () => {
         </Route>
         <Route path="/birthday">
           <BirthdayApp />
+        </Route>
+        <Route path="/crytocurrencyapp">
+          <CryptocurrencyApp />
         </Route>
         <Route path="/">
           <Home />
