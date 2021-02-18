@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import { MdMonetizationOn, MdLocalAtm } from "react-icons/md";
+import {
+  MdMonetizationOn,
+  MdLocalAtm,
+  MdTrendingUp,
+  MdTrendingDown,
+} from "react-icons/md";
 
 function CryptocurrencyApp() {
   const [info, setInfo] = useState([]);
@@ -19,8 +24,6 @@ function CryptocurrencyApp() {
       );
 
       const data = await resp.json();
-
-      // console.log(data);
 
       setInfo(data);
     } catch (error) {
@@ -53,6 +56,7 @@ function CryptocurrencyApp() {
               <th scope="col">#</th>
               <th scope="col">Cryptocurrency</th>
               <th scope="col">Price (US$)</th>
+              <th scope="col">Price change 24h (%)</th>
               <th scope="col">Last Updated</th>
             </tr>
           </thead>
@@ -73,6 +77,21 @@ function CryptocurrencyApp() {
                     </span>
                   </td>
                   <td>{item.current_price}</td>
+                  <td
+                    className={`${
+                      Number(item.price_change_percentage_24h) > 0
+                        ? "text-success"
+                        : "text-danger"
+                    }`}
+                  >
+                    {item.price_change_percentage_24h.toFixed(2)}
+                    &nbsp;
+                    {Number(item.price_change_percentage_24h) > 0 ? (
+                      <MdTrendingUp />
+                    ) : (
+                      <MdTrendingDown />
+                    )}
+                  </td>
                   <td>{item.last_updated}</td>
                 </tr>
               ))
