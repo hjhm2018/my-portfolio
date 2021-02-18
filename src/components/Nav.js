@@ -16,6 +16,7 @@ import Imc from "./Imc";
 import Fakenews from "./Fakenews";
 import BirthdayApp from "./BirthdayApp";
 import CryptocurrencyApp from "./CryptocurrencyApp";
+import RandomBibleVersesApp from "./RandomBibleVersesApp";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -102,7 +103,15 @@ const nav = () => {
               to="/crytocurrencyapp"
               eventKey={2}
             >
-              CryptocurrencyApp
+              Cryptocurrency App
+            </Nav.Link>
+            <Nav.Link
+              className="d-none"
+              as={Link}
+              to="/randombibleversesapp"
+              eventKey={2}
+            >
+              Random Bible Verses App
             </Nav.Link>
 
             {/* <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'linkedin']} /></Nav.Link>
@@ -162,6 +171,9 @@ const nav = () => {
         </Route>
         <Route path="/crytocurrencyapp">
           <CryptocurrencyApp />
+        </Route>
+        <Route path="/randombibleversesapp">
+          <RandomBibleVersesApp />
         </Route>
         <Route path="/">
           <Home />

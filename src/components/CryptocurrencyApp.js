@@ -39,11 +39,14 @@ function CryptocurrencyApp() {
         </h1>
       </div>
       <div class="col-12">
-        <h2 className="text-center p-2">
+        <h2
+          className="text-center p-2"
+          style={{ fontFamily: "Courier New, monospace" }}
+        >
           Top 25 Cryptocurrencies price info provided by CoinGecko API
         </h2>
       </div>
-      <div className="col-12">
+      <div className="col-12 table-responsive">
         <table className="table table-dark text-center rounded">
           <thead>
             <tr>

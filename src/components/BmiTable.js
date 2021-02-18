@@ -51,6 +51,7 @@ function BmiTable({ bmiList, deleteBMI }) {
           )}
         </tbody>
       </table>
+      <div className="invisible mb-5">Just an invisible container</div>
     </div>
   );
 }

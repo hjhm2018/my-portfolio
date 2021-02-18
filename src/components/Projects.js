@@ -131,6 +131,14 @@ const Projects = () => {
           Cryptocurrencies Price App
         </Nav.Link>
         <Nav.Link
+          className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
+          as={Link}
+          to="/randombibleversesapp"
+          eventKey={2}
+        >
+          Random Bible Verses App
+        </Nav.Link>
+        <Nav.Link
           className="btn btn-primary mb-5 col-8 col-md-4 mx-auto"
           as={Link}
           to="/bmicalculator"
