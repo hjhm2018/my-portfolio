@@ -1,5 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {
+  RiTempHotLine,
+  RiTempColdLine,
+  RiCelsiusLine,
+  RiCommunityLine,
+  RiBlazeLine,
+  RiTempHotFill,
+} from "react-icons/ri";
 
 export class Weather extends Component {
   state = {
@@ -58,12 +66,14 @@ export class Weather extends Component {
             className="p-2 mt-5 text-center"
             type="text"
             name="city"
+            maxLength="50"
             onChange={this.onChange}
             placeholder="Enter city name"
           />
           <button
             className="btn btn-primary p-2 ml-1"
             onClick={() => this.onClick()}
+            disabled={!this.state.city}
           >
             Search
           </button>
@@ -72,24 +82,40 @@ export class Weather extends Component {
         {this.state.weatherData.data && this.state.weatherData.data.name ? (
           <div className="bg-secondary text-light col-3 mx-auto rounded p-3">
             <p>
-              <span className="font-weight-bold">City: </span>{" "}
+              <span className="font-weight-bold">
+                <RiCommunityLine /> &nbsp; City:{" "}
+              </span>{" "}
               {this.state.weatherData.data.name}
             </p>
             <p>
-              <span className="font-weight-bold">Temperature: </span>{" "}
-              {this.state.weatherData.data.main.temp} ºC
+              <span className="font-weight-bold">
+                <RiTempHotFill />
+                &nbsp; Temperature:{" "}
+              </span>{" "}
+              {this.state.weatherData.data.main.temp}&nbsp;
+              <RiCelsiusLine />
             </p>
             <p>
-              <span className="font-weight-bold">Feels like: </span>{" "}
-              {this.state.weatherData.data.main.feels_like} ºC
+              <span className="font-weight-bold">
+                <RiBlazeLine />
+                &nbsp; Feels like:{" "}
+              </span>{" "}
+              {this.state.weatherData.data.main.feels_like}&nbsp;
+              <RiCelsiusLine />
             </p>
             <p>
-              <span className="font-weight-bold">Max. Temp: </span>{" "}
-              {this.state.weatherData.data.main.temp_max} ºC
+              <span className="font-weight-bold">
+                <RiTempHotLine /> &nbsp;Max. Temp:{" "}
+              </span>{" "}
+              {this.state.weatherData.data.main.temp_max}&nbsp;
+              <RiCelsiusLine />
             </p>
             <p>
-              <span className="font-weight-bold">Min. Temp: </span>
-              {this.state.weatherData.data.main.temp_min} ºC
+              <span className="font-weight-bold">
+                <RiTempColdLine /> &nbsp;Min. Temp:{" "}
+              </span>
+              {this.state.weatherData.data.main.temp_min}&nbsp;
+              <RiCelsiusLine />
             </p>
           </div>
         ) : (
