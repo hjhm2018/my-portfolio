@@ -168,6 +168,9 @@ function Imc() {
       {bmiRanges >= 30 && bmiRanges <= 34.9 ? <p>Obesity</p> : ""}
       {bmiRanges >= 35 ? <p>Extremely Obese</p> : ""}
       <BmiTable deleteBMI={deleteBMI} bmiList={bmiList} />
+      <div className="pb-5 mt-5 mb-5 invisible">
+        This is an invisible container
+      </div>
     </div>
   );
 }
