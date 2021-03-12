@@ -88,9 +88,9 @@ function About() {
           </p>
           <p>
             The web technologies, programming languages, libraries, frameworks,
-            CMS and databases that I have used include: HTML5, CSS, SASS,
-            JavaScript, jQuery, Bootstrap, ReactJS, AngularJS, NodeJS, MongoDB,
-            Unity, PHP & MySQL, WordPress, GatsbyJS, and Contentful.
+            CMS and databases that I have used include: HTML5, CSS, Sass,
+            JavaScript, jQuery, Bootstrap, React, AngularJS, Node.js, MongoDB,
+            Unity, PHP & MySQL, WordPress, GatsbyJS, Contentful and Vue.js.
           </p>
           <p>
             This portfolio was built using exclusively ReactJS, but there is a

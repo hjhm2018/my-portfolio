@@ -125,7 +125,7 @@ const Projects = () => {
         <Nav.Link
           className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
           as={Link}
-          to="/crytocurrencyapp"
+          to="/cryptocurrencyapp"
           eventKey={2}
         >
           Cryptocurrencies Price App

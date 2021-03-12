@@ -100,7 +100,7 @@ const nav = () => {
             <Nav.Link
               className="d-none"
               as={Link}
-              to="/crytocurrencyapp"
+              to="/cryptocurrencyapp"
               eventKey={2}
             >
               Cryptocurrency App
@@ -169,7 +169,7 @@ const nav = () => {
         <Route path="/birthday">
           <BirthdayApp />
         </Route>
-        <Route path="/crytocurrencyapp">
+        <Route path="/cryptocurrencyapp">
           <CryptocurrencyApp />
         </Route>
         <Route path="/randombibleversesapp">
