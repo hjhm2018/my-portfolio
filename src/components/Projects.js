@@ -139,6 +139,14 @@ const Projects = () => {
           Random Bible Verses App
         </Nav.Link>
         <Nav.Link
+          className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
+          as={Link}
+          to="/palindromechecker"
+          eventKey={2}
+        >
+          Palindrome Checker App
+        </Nav.Link>
+        <Nav.Link
           className="btn btn-primary mb-5 col-8 col-md-4 mx-auto"
           as={Link}
           to="/bmicalculator"

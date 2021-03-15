@@ -17,6 +17,7 @@ import Fakenews from "./Fakenews";
 import BirthdayApp from "./BirthdayApp";
 import CryptocurrencyApp from "./CryptocurrencyApp";
 import RandomBibleVersesApp from "./RandomBibleVersesApp";
+import Palindrome from "./Palindrome";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -113,6 +114,14 @@ const nav = () => {
             >
               Random Bible Verses App
             </Nav.Link>
+            <Nav.Link
+              className="d-none"
+              as={Link}
+              to="/palindromechecker"
+              eventKey={2}
+            >
+              Palindrome Checker App
+            </Nav.Link>
 
             {/* <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'linkedin']} /></Nav.Link>
                         <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'github']} /></Nav.Link> */}
@@ -175,7 +184,10 @@ const nav = () => {
         <Route path="/randombibleversesapp">
           <RandomBibleVersesApp />
         </Route>
-        <Route path="/">
+        <Route path="/palindromechecker">
+          <Palindrome />
+        </Route>
+        <Route exact path="/">
           <Home />
         </Route>
       </Switch>
