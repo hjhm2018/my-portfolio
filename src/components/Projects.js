@@ -18,7 +18,7 @@ import Nav from "react-bootstrap/Nav";
 
 const Projects = () => {
   return (
-    <div>
+    <div className="mx-auto col-sm-12 col-lg-10 pt-2 mb-5">
       <h1 className="text-center">Projects</h1>
       <CardGroup className="mb-5 d-flex justify-content-around">
         <div className="row justify-content-center">
@@ -145,6 +145,14 @@ const Projects = () => {
           eventKey={2}
         >
           Palindrome Checker App
+        </Nav.Link>
+        <Nav.Link
+          className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
+          as={Link}
+          to="/primenumberchecker"
+          eventKey={2}
+        >
+          Prime Number Checker App
         </Nav.Link>
         <Nav.Link
           className="btn btn-primary mb-5 col-8 col-md-4 mx-auto"

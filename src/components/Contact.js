@@ -17,7 +17,7 @@ function Contact() {
   };
 
   return (
-    <>
+    <div className="container">
       {showForm ? (
         <ContactForm hide={buttonHide} className="m-5" />
       ) : (
@@ -54,7 +54,7 @@ function Contact() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
