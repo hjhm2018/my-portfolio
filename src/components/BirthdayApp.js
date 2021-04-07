@@ -17,6 +17,21 @@ import {
   MdCheckCircle,
 } from "react-icons/md";
 
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 const getSessionStorage = () => {
   let list = sessionStorage.getItem("list");
 
@@ -261,757 +276,73 @@ function BirthdayApp() {
         </div>
         <div className="col-md-6 col-sm-12 mt-4 mx-auto">
           <Accordion>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="0"
-                >
-                  January
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="0">
-                <Card.Body>
-                  {birthdayList.filter(
-                    (birthday) => birthday.month === "January"
-                  ).length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "January")
-                      .sort((a, b) =>
-                        a.day > b.day
-                          ? 1
-                          : a.day === b.day
-                          ? a.name > b.name
-                            ? 1
-                            : -1
-                          : -1
-                      )
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="1"
-                >
-                  February
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="1">
-                <Card.Body>
-                  {birthdayList.filter(
-                    (birthday) => birthday.month === "February"
-                  ).length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "February")
-                      .sort((a, b) =>
-                        a.day > b.day
-                          ? 1
-                          : a.day === b.day
-                          ? a.name > b.name
-                            ? 1
-                            : -1
-                          : -1
-                      )
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="2"
-                >
-                  March
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="2">
-                <Card.Body>
-                  {birthdayList
-                    .filter((birthday) => birthday.month === "March")
-                    .sort((a, b) =>
-                      a.day > b.day
-                        ? 1
-                        : a.day === b.day
-                        ? a.name > b.name
-                          ? 1
-                          : -1
-                        : -1
-                    ).length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "March")
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="3"
-                >
-                  April
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="3">
-                <Card.Body>
-                  {birthdayList
-                    .filter((birthday) => birthday.month === "April")
-                    .sort((a, b) =>
-                      a.day > b.day
-                        ? 1
-                        : a.day === b.day
-                        ? a.name > b.name
-                          ? 1
-                          : -1
-                        : -1
-                    ).length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "April")
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className={`text-center text-light bg-dark rounded ${styles.name} mr-1`}
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className={`text-center text-light bg-dark rounded ${styles.day} mr-1`}
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="4"
-                >
-                  May
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="4">
-                <Card.Body>
-                  {birthdayList.filter((birthday) => birthday.month === "May")
-                    .length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "May")
-                      .sort((a, b) =>
-                        a.day > b.day
-                          ? 1
-                          : a.day === b.day
-                          ? a.name > b.name
-                            ? 1
-                            : -1
-                          : -1
-                      )
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="5"
-                >
-                  June
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="5">
-                <Card.Body>
-                  {birthdayList
-                    .filter((birthday) => birthday.month === "June")
-                    .sort((a, b) =>
-                      a.day > b.day
-                        ? 1
-                        : a.day === b.day
-                        ? a.name > b.name
-                          ? 1
-                          : -1
-                        : -1
-                    ).length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "June")
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="6"
-                >
-                  July
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="6">
-                <Card.Body>
-                  {birthdayList.filter((birthday) => birthday.month === "July")
-                    .length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "July")
-                      .sort((a, b) =>
-                        a.day > b.day
-                          ? 1
-                          : a.day === b.day
-                          ? a.name > b.name
-                            ? 1
-                            : -1
-                          : -1
-                      )
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="7"
-                >
-                  August
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="7">
-                <Card.Body>
-                  {birthdayList.filter(
-                    (birthday) => birthday.month === "August"
-                  ).length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "August")
-                      .sort((a, b) =>
-                        a.day > b.day
-                          ? 1
-                          : a.day === b.day
-                          ? a.name > b.name
-                            ? 1
-                            : -1
-                          : -1
-                      )
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="8"
-                >
-                  September
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="8">
-                <Card.Body>
-                  {birthdayList.filter(
-                    (birthday) => birthday.month === "September"
-                  ).length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "September")
-                      .sort((a, b) =>
-                        a.day > b.day
-                          ? 1
-                          : a.day === b.day
-                          ? a.name > b.name
-                            ? 1
-                            : -1
-                          : -1
-                      )
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="9"
-                >
-                  October
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="9">
-                <Card.Body>
-                  {birthdayList.filter(
-                    (birthday) => birthday.month === "October"
-                  ).length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "October")
-                      .sort((a, b) =>
-                        a.day > b.day
-                          ? 1
-                          : a.day === b.day
-                          ? a.name > b.name
-                            ? 1
-                            : -1
-                          : -1
-                      )
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="10"
-                >
-                  November
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="10">
-                <Card.Body>
-                  {birthdayList.filter(
-                    (birthday) => birthday.month === "November"
-                  ).length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "November")
-                      .sort((a, b) =>
-                        a.day > b.day
-                          ? 1
-                          : a.day === b.day
-                          ? a.name > b.name
-                            ? 1
-                            : -1
-                          : -1
-                      )
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header className="bg-dark text-center">
-                <Accordion.Toggle
-                  className="text-light"
-                  as={Button}
-                  variant="link"
-                  eventKey="11"
-                >
-                  December
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="11">
-                <Card.Body>
-                  {birthdayList.filter(
-                    (birthday) => birthday.month === "December"
-                  ).length > 0 ? (
-                    birthdayList
-                      .filter((birthday) => birthday.month === "December")
-                      .sort((a, b) =>
-                        a.day > b.day
-                          ? 1
-                          : a.day === b.day
-                          ? a.name > b.name
-                            ? 1
-                            : -1
-                          : -1
-                      )
-                      .map((birthday, index) => {
-                        return (
-                          <div key={index} className="text-center">
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={`${birthday.name
-                                .charAt(0)
-                                .toUpperCase()}${birthday.name.slice(1)}`}
-                              disabled
-                            />
-                            <input
-                              className="text-center text-light bg-dark rounded"
-                              type="text"
-                              value={birthday.day}
-                              disabled
-                            />
-                            &nbsp;
-                            <span
-                              className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
-                            >
-                              <MdDelete
-                                onClick={() => {
-                                  deleteDate(birthday.id);
-                                }}
-                              />
-                            </span>
-                          </div>
-                        );
-                      })
-                  ) : (
-                    <p className="text-center">No Birthday's this month</p>
-                  )}
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
+            {months.map((month, index) => {
+              return (
+                <Card key={month}>
+                  <Card.Header className="bg-dark text-center">
+                    <Accordion.Toggle
+                      className="text-light"
+                      as={Button}
+                      variant="link"
+                      eventKey={index + 1}
+                    >
+                      {month}
+                    </Accordion.Toggle>
+                  </Card.Header>
+                  <Accordion.Collapse eventKey={index + 1}>
+                    <Card.Body>
+                      {birthdayList.filter(
+                        (birthday) => birthday.month === month
+                      ).length > 0 ? (
+                        birthdayList
+                          .filter((birthday) => birthday.month === month)
+                          .sort((a, b) =>
+                            a.day > b.day
+                              ? 1
+                              : a.day === b.day
+                              ? a.name > b.name
+                                ? 1
+                                : -1
+                              : -1
+                          )
+                          .map((birthday, index) => {
+                            return (
+                              <div key={index} className="text-center">
+                                <input
+                                  className="text-center text-light bg-dark rounded"
+                                  type="text"
+                                  value={`${birthday.name
+                                    .charAt(0)
+                                    .toUpperCase()}${birthday.name.slice(1)}`}
+                                  disabled
+                                />
+                                <input
+                                  className="text-center text-light bg-dark rounded"
+                                  type="text"
+                                  value={birthday.day}
+                                  disabled
+                                />
+                                &nbsp;
+                                <span
+                                  className={`d-inline-block border py-1 px-2 rounded ${styles.cursor} border-dark`}
+                                >
+                                  <MdDelete
+                                    onClick={() => {
+                                      deleteDate(birthday.id);
+                                    }}
+                                  />
+                                </span>
+                              </div>
+                            );
+                          })
+                      ) : (
+                        <p className="text-center">No Birthday's this month</p>
+                      )}
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              );
+            })}
           </Accordion>
         </div>
       </div>
