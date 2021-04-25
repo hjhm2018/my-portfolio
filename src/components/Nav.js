@@ -19,6 +19,7 @@ import CryptocurrencyApp from "./CryptocurrencyApp";
 import RandomBibleVersesApp from "./RandomBibleVersesApp";
 import Palindrome from "./Palindrome";
 import PrimeNumberApp from "./PrimeNumberApp";
+import RemindMeApp from "./RemindMeApp";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -132,6 +133,14 @@ const nav = () => {
             >
               Prime Number Checker App
             </Nav.Link>
+            <Nav.Link
+              className="d-none"
+              as={Link}
+              to="/remindmeapp"
+              eventKey={2}
+            >
+              Remind Me App
+            </Nav.Link>
 
             {/* <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'linkedin']} /></Nav.Link>
                         <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'github']} /></Nav.Link> */}
@@ -199,6 +208,9 @@ const nav = () => {
         </Route>
         <Route path="/primenumberchecker">
           <PrimeNumberApp />
+        </Route>
+        <Route path="/remindmeapp">
+          <RemindMeApp />
         </Route>
         <Route exact path="/">
           <Home />
