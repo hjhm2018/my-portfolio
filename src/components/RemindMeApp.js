@@ -33,7 +33,12 @@ function RemindMeApp() {
     e.preventDefault();
     setReminders((reminders) => [
       ...reminders,
-      { id: Date.now(), reminderType, reminderDescription, reminderDate },
+      {
+        id: Date.now(),
+        reminderType,
+        reminderDescription: reminderDescription.trim(),
+        reminderDate,
+      },
     ]);
 
     setReminderType("");
@@ -123,7 +128,7 @@ function RemindMeApp() {
                   variant="primary"
                   disabled={
                     reminderType === "" ||
-                    reminderDescription === "" ||
+                    reminderDescription.trim() === "" ||
                     reminderDate === ""
                   }
                   onClick={(e) => addReminder(e)}
@@ -168,11 +173,11 @@ function RemindMeApp() {
         </div>
         <CardDeck className="col-12 d-flex flex-wrap justify-content-around mt-3">
           {reminders.filter((reminder) =>
-            reminder.reminderType.includes(reminderFilter)
+            reminder.reminderType?.includes(reminderFilter)
           ).length > 0 ? (
             reminders
               .filter((reminder) =>
-                reminder.reminderType.includes(reminderFilter)
+                reminder.reminderType?.includes(reminderFilter)
               )
               .map((reminder, index) => (
                 <Card

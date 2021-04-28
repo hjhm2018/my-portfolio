@@ -116,7 +116,7 @@ function Fakenews() {
     setMessageObject({
       id: Date.now(),
       name,
-      message,
+      message: message.trim(),
       current_date: `${month} ${date}, ${year}`,
     });
   }, [message, messagesList]);
@@ -185,7 +185,9 @@ function Fakenews() {
               className={`d-block ml-auto mr-3`}
               variant="primary"
               onClick={addPost}
-              disabled={message.length > 150 || (message.length === 0 && true)}
+              disabled={
+                message.length > 150 || (message.trim().length === 0 && true)
+              }
             >
               Post <MdSend />
             </Button>

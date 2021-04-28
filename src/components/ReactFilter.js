@@ -5,7 +5,7 @@ function ReactFilter() {
   const [name, setName] = useState("");
 
   const onChange = (e) => {
-    setName(e.target.value.toLowerCase());
+    setName(e.target.value.trim().toLowerCase());
   };
 
   useEffect(() => {

@@ -144,7 +144,7 @@ function BirthdayApp() {
   useEffect(() => {
     setBirthdayObject({
       id: Date.now(),
-      name,
+      name: name.trim(),
       month,
       day,
       year,
@@ -239,6 +239,7 @@ function BirthdayApp() {
                 </Form.Label>
                 <Form.Control
                   id="inlineFormInputName"
+                  autoComplete="off"
                   maxLength="20"
                   placeholder="Name"
                   value={name}
@@ -266,7 +267,11 @@ function BirthdayApp() {
                 <Button
                   type="submit"
                   onClick={() => addBirthday()}
-                  disabled={name.length > 20 || name.length === 0 || day === ""}
+                  disabled={
+                    name.trim().length > 20 ||
+                    name.trim().length === 0 ||
+                    day === ""
+                  }
                 >
                   <MdAddCircleOutline /> Add
                 </Button>

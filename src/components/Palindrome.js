@@ -11,7 +11,7 @@ function Palindrome() {
   const [word, setWord] = useState("");
 
   const checkPalindrome = useCallback(() => {
-    if (word === "" || word.length <= 1) {
+    if (word.trim() === "" || word.length <= 1) {
       return;
     }
     const firstWord = word

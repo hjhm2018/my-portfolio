@@ -18,7 +18,7 @@ export class Weather extends Component {
 
   onChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value.trim(),
     });
     // console.log(e.target.value);
   };
