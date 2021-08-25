@@ -51,11 +51,11 @@ function Imc() {
 
   return (
     <div className="text-center">
-      <h2 className="mt-3 pt-2 bg-dark text-light col-md-8 col-sm-12 mx-auto p-3 rounded font-italic">
+      <h2 className="mt-3 pt-2 bg-dark text-light col-md-8 col-sm-12 mx-auto p-3 rounded">
         <span role="img" aria-label="lifting weight emoji">
           &#128170;
         </span>{" "}
-        Body Mass Index (BMI) Calculator{" "}
+        <span className="font-italic">Body Mass Index (BMI) Calculator</span>{" "}
         <span role="img" aria-label="lifting weight emoji">
           &#127947;
         </span>{" "}

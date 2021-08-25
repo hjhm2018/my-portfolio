@@ -24,6 +24,8 @@ import RemindMeApp from "./RemindMeApp";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
+import ScrollToTop from "../utilities/ScrollToTop";
+
 const nav = () => {
   return (
     <Router>
@@ -163,6 +165,7 @@ const nav = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <ScrollToTop />
       <Switch>
         <Route path="/about">
           <About />
