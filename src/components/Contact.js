@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import ContactForm from "./ContactForm";
+import { Card, Button } from "react-bootstrap";
+import image from "../images/linkedin.jpeg";
+import { AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 
 function Contact() {
   const [showForm, setshowForm] = useState(false);
 
-  const reloadPage = () => {
-    window.location.reload();
-  };
+  // const reloadPage = () => {
+  //   window.location.reload();
+  // };
 
   const buttonShow = () => {
     setshowForm(true);
@@ -23,37 +26,44 @@ function Contact() {
       ) : (
         <div>
           <h1 className="text-center">Contact</h1>
-          <div className="d-flex justify-content-center">
-            <div
-              className="LI-profile-badge"
-              data-version="v1"
-              data-size="medium"
-              data-locale="en_US"
-              data-type="horizontal"
-              data-theme="dark"
-              data-vanity="herrerahenry"
-            >
-              <a
-                class="LI-simple-link"
-                href="https://ca.linkedin.com/in/herrerahenry?trk=profile-badge"
-              >
-                Henry Herrera
-              </a>
-            </div>
+          <div className="d-flex justify-content-center mt-2 mb-4">
+            <Card className="text-center" style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={image} />
+              <Card.Body>
+                <Card.Title className="font-weight-bold">
+                  Henry Herrera
+                </Card.Title>
+                <Card.Text>
+                  Geological Engineer - MSc.Geology - Reservoir Engineering
+                  Postgraduate Diploma - Web Developer
+                </Card.Text>
+                <Button
+                  variant="primary"
+                  as="a"
+                  href="http://linkedin.com/in/herrerahenry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn <AiFillLinkedin />
+                </Button>
+              </Card.Body>
+            </Card>
           </div>
-          <p className="col-lg-12 text-center">
-            <button className=" btn btn-info" onClick={reloadPage}>
-              Click me if you don't see the badge
-            </button>
-          </p>
 
           <div className="col-lg-12 mt-1 mb-5 text-center">
-            <button onClick={buttonShow} class="btn btn-success">
-              Send a message
+            <button
+              onClick={buttonShow}
+              class="btn btn-success font-weight-bold"
+            >
+              Send a message <AiOutlineMail />
             </button>
           </div>
         </div>
       )}
+
+      <div className="pb-5 mt-5 mb-5 invisible">
+        This is an invisible container
+      </div>
     </div>
   );
 }
