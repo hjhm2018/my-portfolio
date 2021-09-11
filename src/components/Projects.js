@@ -4,6 +4,9 @@ import blog1 from "../images/blog1.png";
 import blog2 from "../images/blog2.png";
 import appImage from "../images/app.jpeg";
 import impactraction from "../images/impactraction.JPG";
+import petrophysics from "../images/petrophysics.png";
+import petrofisica from "../images/petrofisica.png";
+import lists from "../images/lists.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
@@ -62,6 +65,37 @@ const Projects = () => {
       modalContent: `
       <p>A landing page for a real client working as a group for our final project at Cornerstone International Community College of Canada in Vancouver.</p>
       <p>The website was made using GatsbyJS and Contentful to create a headless CMS with the purpose of facilitating the management of the site content to the client.</p>`,
+    },
+    {
+      title: "Petrophysics Equations Website - Mobile Version",
+      image: petrophysics,
+      content:
+        "A website with the most common petrophysics equations used in the oil and gas industry, now optimized for mobile devices.",
+      modalContent: `
+      <p>A website built on Blogger using HTML, CSS, JavaScript, and Bootstrap. This new version works correctly on mobile phones, and it is totally responsive.</p>
+      <p>Ideal for petrophysicists, petroleum geologists, petroleum engineer, geoscientists and geology or earth sciences students. You can visit it &nbsp; <a href="https://petrophysicsequations-mobile.blogspot.com/"
+      target="_blank" rel="noopener noreferrer">here</a>.</p>`,
+    },
+    {
+      title: "Petrophysics Equations Website - Spanish - Mobile Version",
+      image: petrofisica,
+      content:
+        "A website with the most common petrophysics equations used in the oil and gas industry for Spanish speakers, now optimized for mobile devices.",
+      modalContent: `
+      <p>A website built on Blogger using HTML, CSS, JavaScript, and Bootstrap in Spanish language. This new version works properly on mobile phones, and it is totally responsive.</p>
+      <p>Ideal for petrophysicists, petroleum geologists, petroleum engineer, geoscientists, and geology or earth sciences
+      students. You can visit it &nbsp; <a href="https://ecuacionespetrofisica-movil.blogspot.com/"
+      target="_blank" rel="noopener noreferrer">here</a>.</p>`,
+    },
+    {
+      title: "Helpful Lists Apps Website",
+      image: lists,
+      content:
+        "A website with the very helpful lists that can help organize people's life without downloading an app.",
+      modalContent: `
+      <p>A website built on Blogger using HTML, CSS, JavaScript, and Bootstrap, and it is totally responsive!. The website uses localStorage, which means that the data the users save, will be stored in their devices.</p>
+      <p>It includes the following applications: Birthday Reminder App, Body Mass Index Calculator App, Recipes Creator App, Supermarket List App, and To Do List App. You can visit it &nbsp; <a href="https://helpful-lists.blogspot.com/"
+      target="_blank" rel="noopener noreferrer">here</a>.</p>`,
     },
   ];
 
