@@ -97,7 +97,7 @@ function CryptocurrencyApp() {
               ))
             ) : (
               <tr>
-                <td colSpan="4">No data</td>
+                <td colSpan="5">No data</td>
               </tr>
             )}
           </tbody>
