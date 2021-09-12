@@ -152,7 +152,11 @@ const Projects = () => {
         <div className="row justify-content-center">
           {cards &&
             cards.map((card, index) => (
-              <Card key={index} className="col-lg-4" style={{ width: "18rem" }}>
+              <Card
+                key={index}
+                className="col-10 col-lg-4"
+                style={{ width: "18rem" }}
+              >
                 <Card.Img
                   className="pt-2"
                   variant="top"
