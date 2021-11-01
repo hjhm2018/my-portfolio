@@ -3,13 +3,10 @@ import ContactForm from "./ContactForm";
 import { Card, Button } from "react-bootstrap";
 import image from "../images/linkedin.jpeg";
 import { AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
+import { Helmet } from "react-helmet";
 
 function Contact() {
   const [showForm, setshowForm] = useState(false);
-
-  // const reloadPage = () => {
-  //   window.location.reload();
-  // };
 
   const buttonShow = () => {
     setshowForm(true);
@@ -21,6 +18,11 @@ function Contact() {
 
   return (
     <div className="container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact</title>
+        <meta name="description" content="Contact Page" />
+      </Helmet>
       {showForm ? (
         <ContactForm hide={buttonHide} className="m-5" />
       ) : (

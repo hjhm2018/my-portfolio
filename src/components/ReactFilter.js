@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 function ReactFilter() {
   const [users, setUsers] = useState([]);
@@ -24,6 +25,11 @@ function ReactFilter() {
 
   return (
     <div className="container-fluid mb-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Filter By Name App</title>
+        <meta name="description" content="Filter By Name App Page" />
+      </Helmet>
       <h1 className="text-center p-3 bg-secondary mt-2 rounded text-light col-md-12 col-sm-12">
         Users List from JSON Placeholder API
       </h1>

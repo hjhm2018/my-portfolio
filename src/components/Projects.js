@@ -9,6 +9,7 @@ import petrofisica from "../images/petrofisica.png";
 import lists from "../images/lists.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Projects = () => {
   const [modalContent, setModalContent] = useState({
@@ -147,6 +148,11 @@ const Projects = () => {
   ];
   return (
     <div className="mx-auto col-sm-12 col-lg-10 pt-2 mb-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Projects</title>
+        <meta name="description" content="Projects Page" />
+      </Helmet>
       <h1 className="text-center">Projects</h1>
       <CardGroup className="mb-5 d-flex justify-content-around">
         <div className="row justify-content-center">

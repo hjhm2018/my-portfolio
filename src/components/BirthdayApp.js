@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
+import { Helmet } from "react-helmet";
 
 import Modal from "react-bootstrap/Modal";
 
@@ -158,6 +159,11 @@ function BirthdayApp() {
   if (show) {
     return (
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Birthday App</title>
+          <meta name="description" content="Birthday App Page" />
+        </Helmet>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header className="bg-success" closeButton>
             <Modal.Title className="text-white">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import { Helmet } from "react-helmet";
 
 import BmiTable from "./BmiTable";
 import imageBmi from "../images/measuretape.jpeg";
@@ -51,6 +52,11 @@ function Imc() {
 
   return (
     <div className="text-center">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Body Mass Index App</title>
+        <meta name="description" content="Body Mass Index App Page" />
+      </Helmet>
       <h2 className="mt-3 pt-2 bg-dark text-light col-md-8 col-sm-12 mx-auto p-3 rounded">
         <span role="img" aria-label="lifting weight emoji">
           &#128170;

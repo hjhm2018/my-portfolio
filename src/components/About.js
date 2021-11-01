@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-// import Carousel from 'react-bootstrap/Carousel'
-// import blog1 from '../images/blog1.png'
-// import blog2 from '../images/blog2.png'
-// import appImage from '../images/app.jpeg'
+import { Helmet } from "react-helmet";
 
 function About() {
   let [show, setShow] = useState(true);
@@ -16,46 +13,12 @@ function About() {
   };
 
   return (
-    //         <div className="d-flex justify-content-center">
-    //             <Carousel className="col-md-6">
-    //   <Carousel.Item>
-    //     <img
-    //       className="d-block w-100 carrouselImage"
-    //       src={blog1}
-    //       alt="First slide"
-    //     />
-    //     <Carousel.Caption>
-    //       <h3>First slide label</h3>
-    //       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    //     </Carousel.Caption>
-    //   </Carousel.Item>
-    //   <Carousel.Item>
-    //     <img
-    //       className="d-block w-100 carrouselImage"
-    //       src={blog2}
-    //       alt="Third slide"
-    //     />
-
-    //     <Carousel.Caption>
-    //       <h3>Second slide label</h3>
-    //       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    //     </Carousel.Caption>
-    //   </Carousel.Item>
-    //   <Carousel.Item>
-    //     <img
-    //       className="d-block w-100 carrouselImage"
-    //       src={appImage}
-    //       alt="Third slide"
-    //     />
-
-    //     <Carousel.Caption>
-    //       <h3>Third slide label</h3>
-    //       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    //     </Carousel.Caption>
-    //   </Carousel.Item>
-    // </Carousel>
-    //         </div>
     <div className="container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>About</title>
+        <meta name="description" content="About Page" />
+      </Helmet>
       <div className="row">
         <div className="col-lg-12">
           <h1 className="text-center">About</h1>

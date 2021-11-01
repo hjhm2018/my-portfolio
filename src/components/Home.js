@@ -1,19 +1,21 @@
 import React from "react";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Card from "react-bootstrap/Card";
-// import image1 from '../images/henry.jpg'
 import image2 from "../images/henry2.jpeg";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Home() {
   return (
     <div className="col-md-8 mx-auto mt-3 mb-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home</title>
+        <meta name="description" content="Home Page" />
+      </Helmet>
       <h1 className="text-center bg-dark text-light rounded mt-2">
         Henry Herrera - Web Developer
       </h1>
-
-      {/* <FontAwesomeIcon icon={['fab', 'apple']} /> */}
       <Card>
         <div className="row">
           <div className="col-md-4">

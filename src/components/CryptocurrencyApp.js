@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 import {
   MdMonetizationOn,
@@ -36,6 +37,11 @@ function CryptocurrencyApp() {
   }, []);
   return (
     <div className="container mb-5 mt-2">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Cryptocurrency App</title>
+        <meta name="description" content="Cryptocurrency App Page" />
+      </Helmet>
       <div className="col-12 bg-dark text-warning text-center p-3 mb-2 rounded">
         <h1 className="font-italic">
           <MdMonetizationOn /> Cryptocurrency App <MdLocalAtm />

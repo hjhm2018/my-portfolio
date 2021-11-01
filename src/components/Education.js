@@ -1,6 +1,5 @@
 import React from "react";
-// import Tab from 'react-bootstrap/Tab'
-// import Tabs from 'react-bootstrap/Tabs'
+
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -8,10 +7,16 @@ import udoImage from "../images/udo.png";
 import uhImage from "../images/uh.png";
 import ubaImage from "../images/uba.png";
 import cornerstoneImage from "../images/cornerstone.png";
+import { Helmet } from "react-helmet";
 
 function Education() {
   return (
     <div className="mx-auto col-lg-8 pt-2 mb-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Education</title>
+        <meta name="description" content="Education Page" />
+      </Helmet>
       <h1 className="text-center">Education</h1>
       <Accordion defaultActiveKey="0">
         <Card>

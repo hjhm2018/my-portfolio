@@ -6,6 +6,7 @@ import {
   FcCalculator,
   FcNumericalSorting12,
 } from "react-icons/fc";
+import { Helmet } from "react-helmet";
 
 function PrimeNumberApp() {
   const [number, setNumber] = useState("");
@@ -43,6 +44,11 @@ function PrimeNumberApp() {
 
   return (
     <div className="container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Prime Number Checker App</title>
+        <meta name="description" content="Prime Number Checker App Page" />
+      </Helmet>
       <div className="mx-auto text-center col-md-8 col-12 border p-4 mt-3 rounded">
         <h3
           className="font-italic m-2 text-center bg-dark text-white p-2"

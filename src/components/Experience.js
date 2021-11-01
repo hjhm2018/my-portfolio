@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import Tab from "react-bootstrap/Tab";
-// import Tabs from "react-bootstrap/Tabs";
+import { Helmet } from "react-helmet";
 
 import styles from "../Experience.module.css";
 
@@ -42,6 +41,11 @@ function Experience() {
   ];
   return (
     <div className="mx-auto col-md-8 p-2">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Experience</title>
+        <meta name="description" content="Experience Page" />
+      </Helmet>
       <h1 className="text-center mb-4">Experience</h1>
 
       <div className="col-12 text-center">

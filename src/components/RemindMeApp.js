@@ -9,6 +9,7 @@ import {
   BsPeople,
   BsPersonCheck,
 } from "react-icons/bs";
+import { Helmet } from "react-helmet";
 
 const getSessionStorage = () => {
   let list = sessionStorage.getItem("list");
@@ -63,6 +64,11 @@ function RemindMeApp() {
 
   return (
     <div className="container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Remind Me App</title>
+        <meta name="description" content="Remind Me App Page" />
+      </Helmet>
       <div className="row">
         <div className="col-12 text-center bg-dark text-white rounded mt-2">
           <h1 className="font-italic">

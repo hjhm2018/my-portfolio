@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-
 import verses from "./verses";
-
 import { BiChurch, BiBible, BiRefresh } from "react-icons/bi";
+import { Helmet } from "react-helmet";
 
 function RandomBibleVersesApp() {
   const [id, setId] = useState(1);
@@ -22,6 +21,11 @@ function RandomBibleVersesApp() {
         height: "100%",
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Random Bible Verse App</title>
+        <meta name="description" content="Random Bible Verse App Page" />
+      </Helmet>
       <div className="row">
         <div className="col-12 col-md-8 mx-auto pt-2">
           <h1

@@ -2,6 +2,8 @@ import React from "react";
 import { Card, Form, Button } from "react-bootstrap";
 import profilePicture from "../images/profile-picture.jpeg";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
+
 import {
   MdCheckCircle,
   MdSend,
@@ -123,6 +125,11 @@ function Fakenews() {
 
   return (
     <div className="container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>FakeNews App</title>
+        <meta name="description" content="FakeNews App Page" />
+      </Helmet>
       <div className="row d-flex">
         <div
           className={`col-12 text-center font-weight-bold mt-1 ${styles.title}`}
