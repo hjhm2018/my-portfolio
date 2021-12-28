@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { Preloader, Oval } from "react-preloader-icon";
 
 import {
   MdMonetizationOn,
@@ -7,6 +8,16 @@ import {
   MdTrendingUp,
   MdTrendingDown,
 } from "react-icons/md";
+
+const SomeComponent = () => (
+  <Preloader
+    use={Oval}
+    size={32}
+    strokeWidth={8}
+    strokeColor="#FFFFFF"
+    duration={800}
+  />
+);
 
 function CryptocurrencyApp() {
   const [info, setInfo] = useState([]);
@@ -103,7 +114,12 @@ function CryptocurrencyApp() {
               ))
             ) : (
               <tr>
-                <td colSpan="5">No data</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colSpan="2">
+                  <SomeComponent />
+                </td>
               </tr>
             )}
           </tbody>
