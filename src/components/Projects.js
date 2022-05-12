@@ -104,46 +104,57 @@ const Projects = () => {
     {
       url: "earthquakeapp",
       name: "Earthquake Counter App",
+      icon: "&#x1F30E",
     },
     {
       url: "weatherapp",
       name: "Weather App",
+      icon: "&#x2614;",
     },
     {
       url: "reactfilter",
       name: "React Filter by Name",
+      icon: "&#x1F50E;",
     },
     {
       url: "fakenews",
       name: "FakeNews",
+      icon: "&#x1F3A4;",
     },
     {
       url: "birthday",
       name: "Birthday Reminder App",
+      icon: "&#x1F382;",
     },
     {
       url: "cryptocurrencyapp",
       name: "Cryptocurrencies Price App",
+      icon: "&#x1F4B9;",
     },
     {
       url: "randombibleversesapp",
       name: "Random Bible Verses App",
+      icon: "&#x26EA;",
     },
     {
       url: "palindromechecker",
       name: "Palindrome Checker App",
+      icon: "&#x1F524;",
     },
     {
       url: "primenumberchecker",
       name: "Prime Number Checker App",
+      icon: "&#x1F522;",
     },
     {
       url: "remindmeapp",
       name: "Remind Me App",
+      icon: "&#x1F4C5;",
     },
     {
       url: "bmicalculator",
       name: "Calculate Body Mass Index",
+      icon: "&#x1F4AA;",
     },
   ];
   return (
@@ -238,7 +249,8 @@ const Projects = () => {
                 to={`/${link.url}`}
                 eventKey={2}
               >
-                {link.name}
+                {link.name}{" "}
+                <span dangerouslySetInnerHTML={{ __html: link.icon }}></span>
               </Nav.Link>
             ))}
       </div>
