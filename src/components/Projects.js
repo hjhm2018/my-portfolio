@@ -74,7 +74,7 @@ const Projects = () => {
         "A website with the most common petrophysics equations used in the oil and gas industry, now optimized for mobile devices.",
       modalContent: `
       <p>A website built on Blogger using HTML, CSS, JavaScript, and Bootstrap. This new version works correctly on mobile phones, and it is totally responsive.</p>
-      <p>Ideal for petrophysicists, petroleum geologists, petroleum engineer, geoscientists and geology or earth sciences students. You can visit it &nbsp; <a href="https://petrophysicsequations-mobile.blogspot.com/"
+      <p>Ideal for petrophysicists, petroleum geologists, petroleum engineer, geoscientists and geology or earth sciences students. You can visit it &nbsp; <a href="https://petrophysicsequations-ov.blogspot.com/"
       target="_blank" rel="noopener noreferrer">here</a>.</p>`,
     },
     {
@@ -85,7 +85,7 @@ const Projects = () => {
       modalContent: `
       <p>A website built on Blogger using HTML, CSS, JavaScript, and Bootstrap in Spanish language. This new version works properly on mobile phones, and it is totally responsive.</p>
       <p>Ideal for petrophysicists, petroleum geologists, petroleum engineer, geoscientists, and geology or earth sciences
-      students. You can visit it &nbsp; <a href="https://ecuacionespetrofisica-movil.blogspot.com/"
+      students. You can visit it &nbsp; <a href="https://ecuacionespetrofisica-vm.blogspot.com/"
       target="_blank" rel="noopener noreferrer">here</a>.</p>`,
     },
     {
@@ -215,17 +215,32 @@ const Projects = () => {
         <p>Here are some of my project examples: </p>
 
         {links &&
-          links.map((link, index) => (
-            <Nav.Link
-              key={index}
-              className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
-              as={Link}
-              to={`/${link.url}`}
-              eventKey={2}
-            >
-              {link.name}
-            </Nav.Link>
-          ))}
+          links
+            .sort((a, b) => {
+              let nameA = a.name.toUpperCase();
+              let nameB = b.name.toUpperCase();
+
+              if (nameA < nameB) {
+                return -1;
+              }
+
+              if (nameA > nameB) {
+                return 1;
+              }
+
+              return 0;
+            })
+            .map((link, index) => (
+              <Nav.Link
+                key={index}
+                className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
+                as={Link}
+                to={`/${link.url}`}
+                eventKey={2}
+              >
+                {link.name}
+              </Nav.Link>
+            ))}
       </div>
       <div className="pb-5 mt-5 mb-5 invisible">
         This is an invisible container
