@@ -246,7 +246,7 @@ const Projects = () => {
                 key={index}
                 className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
                 as={Link}
-                to={`/${link.url}`}
+                to={`/projects/${link.url}`}
                 eventKey={2}
               >
                 {link.name}{" "}

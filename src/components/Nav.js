@@ -57,16 +57,10 @@ const nav = () => {
             <Nav.Link as={Link} to="/experience" eventKey={2}>
               Experience
             </Nav.Link>
-            <Nav.Link as={Link} to="/projects" eventKey={2}>
-              Projects
-            </Nav.Link>
-            <Nav.Link as={Link} to="/contact" eventKey={2}>
-              Contact
-            </Nav.Link>
             <Nav.Link
               className="d-none"
               as={Link}
-              to="/earthquakeapp"
+              to="/projects/earthquakeapp"
               eventKey={2}
             >
               Earthquake
@@ -74,7 +68,7 @@ const nav = () => {
             <Nav.Link
               className="d-none"
               as={Link}
-              to="/weatherapp"
+              to="/projects/weatherapp"
               eventKey={2}
             >
               Weather
@@ -82,7 +76,7 @@ const nav = () => {
             <Nav.Link
               className="d-none"
               as={Link}
-              to="/reactfilter"
+              to="/projects/reactfilter"
               eventKey={2}
             >
               React Filter
@@ -90,22 +84,32 @@ const nav = () => {
             <Nav.Link
               className="d-none"
               as={Link}
-              to="/bmicalculator"
+              to="/projects/bmicalculator"
               eventKey={2}
             >
               {" "}
               BMI Calculator
             </Nav.Link>
-            <Nav.Link className="d-none" as={Link} to="/fakenews" eventKey={2}>
+            <Nav.Link
+              className="d-none"
+              as={Link}
+              to="/projects/fakenews"
+              eventKey={2}
+            >
               Fakenews
             </Nav.Link>
-            <Nav.Link className="d-none" as={Link} to="/birthday" eventKey={2}>
+            <Nav.Link
+              className="d-none"
+              as={Link}
+              to="/projects/birthday"
+              eventKey={2}
+            >
               BirthdayApp
             </Nav.Link>
             <Nav.Link
               className="d-none"
               as={Link}
-              to="/cryptocurrencyapp"
+              to="/projects/cryptocurrencyapp"
               eventKey={2}
             >
               Cryptocurrency App
@@ -113,7 +117,7 @@ const nav = () => {
             <Nav.Link
               className="d-none"
               as={Link}
-              to="/randombibleversesapp"
+              to="/projects/randombibleversesapp"
               eventKey={2}
             >
               Random Bible Verses App
@@ -121,7 +125,7 @@ const nav = () => {
             <Nav.Link
               className="d-none"
               as={Link}
-              to="/palindromechecker"
+              to="/projects/palindromechecker"
               eventKey={2}
             >
               Palindrome Checker App
@@ -130,7 +134,7 @@ const nav = () => {
             <Nav.Link
               className="d-none"
               as={Link}
-              to="/primenumberchecker"
+              to="/projects/primenumberchecker"
               eventKey={2}
             >
               Prime Number Checker App
@@ -138,10 +142,16 @@ const nav = () => {
             <Nav.Link
               className="d-none"
               as={Link}
-              to="/remindmeapp"
+              to="/projects/remindmeapp"
               eventKey={2}
             >
               Remind Me App
+            </Nav.Link>
+            <Nav.Link as={Link} to="/projects" eventKey={2}>
+              Projects
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contact" eventKey={2}>
+              Contact
             </Nav.Link>
 
             {/* <Nav.Link as={Link} to="/projects" eventKey={2}><FontAwesomeIcon icon={['fab', 'linkedin']} /></Nav.Link>
@@ -179,41 +189,41 @@ const nav = () => {
         <Route path="/experience">
           <Experience />
         </Route>
-        <Route path="/projects">
-          <Projects />
-        </Route>
-        <Route path="/earthquakeapp">
+        <Route path="/projects/earthquakeapp">
           <Earthquake />
         </Route>
-        <Route path="/weatherapp">
+        <Route path="/projects/weatherapp">
           <Weather />
         </Route>
-        <Route path="/reactfilter">
+        <Route path="/projects/reactfilter">
           <ReactFilter />
         </Route>
-        <Route path="/bmicalculator">
+        <Route path="/projects/bmicalculator">
           <Imc />
         </Route>
-        <Route path="/fakenews">
+        <Route path="/projects/fakenews">
           <Fakenews />
         </Route>
-        <Route path="/birthday">
+        <Route path="/projects/birthday">
           <BirthdayApp />
         </Route>
-        <Route path="/cryptocurrencyapp">
+        <Route path="/projects/cryptocurrencyapp">
           <CryptocurrencyApp />
         </Route>
-        <Route path="/randombibleversesapp">
+        <Route path="/projects/randombibleversesapp">
           <RandomBibleVersesApp />
         </Route>
-        <Route path="/palindromechecker">
+        <Route path="/projects/palindromechecker">
           <Palindrome />
         </Route>
-        <Route path="/primenumberchecker">
+        <Route path="/projects/primenumberchecker">
           <PrimeNumberApp />
         </Route>
-        <Route path="/remindmeapp">
+        <Route path="/projects/remindmeapp">
           <RemindMeApp />
+        </Route>
+        <Route path="/projects">
+          <Projects />
         </Route>
         <Route exact path="/">
           <Home />
