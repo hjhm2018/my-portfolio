@@ -158,7 +158,7 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="mx-auto col-sm-12 col-lg-10 pt-2 mb-5">
+    <div className="mx-auto col-sm-12 col-lg-12 pt-2 mb-5">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Projects</title>
@@ -171,8 +171,8 @@ const Projects = () => {
             cards.map((card, index) => (
               <Card
                 key={index}
-                className="col-10 col-lg-4"
-                style={{ width: "18rem" }}
+                className="col-10 col-lg-3 mr-2 mb-2"
+                style={{ width: "16rem" }}
               >
                 <Card.Img
                   className="pt-2"
