@@ -7,6 +7,7 @@ import impactraction from "../images/impactraction.JPG";
 import petrophysics from "../images/petrophysics.png";
 import petrofisica from "../images/petrofisica.png";
 import lists from "../images/lists.png";
+import comparador from "../images/comparador.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -92,10 +93,20 @@ const Projects = () => {
       title: "Helpful Lists Apps Website",
       image: lists,
       content:
-        "A website with the very helpful lists that can help organize people's life without downloading an app.",
+        "A website with very helpful lists that can help organize people's life without downloading an app.",
       modalContent: `
       <p>A website built on Blogger using HTML, CSS, JavaScript, and Bootstrap, and it is totally responsive!. The website uses localStorage, which means that the data the users save, will be stored in their devices.</p>
-      <p>It includes the following applications: Birthday Reminder App, Body Mass Index Calculator App, Recipes Creator App, Supermarket List App, and To Do List App. You can visit it &nbsp; <a href="https://helpful-lists.blogspot.com/"
+      <p>It includes the following applications: Birthday Reminder App, Body Mass Index Calculator App, Recipes Creator App, Supermarket List App, and To Do List App (CRUD app). You can visit it &nbsp; <a href="https://helpful-lists.blogspot.com/"
+      target="_blank" rel="noopener noreferrer">here</a>.</p>`,
+    },
+    {
+      title: "Price Comparison App Website - Spanish",
+      image: comparador,
+      content:
+        "A website that can help people comparing prices of different products without downloading an app.",
+      modalContent: `
+      <p>A website built on Blogger using HTML, CSS, and JavaScript and it is totally responsive!. The website uses localStorage, which means that the data the users save, will be stored in their devices.</p>
+      <p>It was developed specially for Venezuela, but any person from any country can use it. It only needs a product name, the store name, and the payment currency. You can visit it &nbsp; <a href="https://comparador-precios-venezuela.blogspot.com/"
       target="_blank" rel="noopener noreferrer">here</a>.</p>`,
     },
   ];
