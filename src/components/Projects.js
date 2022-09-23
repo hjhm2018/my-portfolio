@@ -8,6 +8,7 @@ import petrophysics from "../images/petrophysics.png";
 import petrofisica from "../images/petrofisica.png";
 import lists from "../images/lists.png";
 import comparador from "../images/comparador.png";
+import listadetareas from "../images/listadetareas.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -107,6 +108,16 @@ const Projects = () => {
       modalContent: `
       <p>A website built on Blogger using HTML, CSS, and JavaScript and it is totally responsive!. The website uses localStorage, which means that the data the users save, will be stored in their devices.</p>
       <p>It was developed specially for Venezuela, but any person from any country can use it. It only needs a product name, the store name, and the payment currency. You can visit it &nbsp; <a href="https://comparador-precios-venezuela.blogspot.com/"
+      target="_blank" rel="noopener noreferrer">here</a>.</p>`,
+    },
+    {
+      title: "Todo List App Website - Spanish",
+      image: listadetareas,
+      content:
+        "A website that can help people organizing their tasks without downloading an app.",
+      modalContent: `
+      <p>A website built on Blogger using HTML, CSS, and JavaScript and it is totally responsive!. The website uses localStorage, which means that the data the users save, will be stored in their devices.</p>
+      <p>It helps people to organize their daily tasks and track their progress. You can visit it &nbsp; <a href="https://comparador-precios-venezuela.blogspot.com/"
       target="_blank" rel="noopener noreferrer">here</a>.</p>`,
     },
   ];
