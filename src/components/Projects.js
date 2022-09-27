@@ -9,6 +9,7 @@ import petrofisica from "../images/petrofisica.png";
 import lists from "../images/lists.png";
 import comparador from "../images/comparador.png";
 import listadetareas from "../images/listadetareas.png";
+import supermarketCalc from "../images/supermarketCalc.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -117,7 +118,17 @@ const Projects = () => {
         "A website that can help people organizing their tasks without downloading an app.",
       modalContent: `
       <p>A website built on Blogger using HTML, CSS, and JavaScript and it is totally responsive!. The website uses localStorage, which means that the data the users save, will be stored in their devices.</p>
-      <p>It helps people to organize their daily tasks and track their progress. You can visit it &nbsp; <a href="https://comparador-precios-venezuela.blogspot.com/"
+      <p>It helps people to organize their daily tasks and track their progress. You can visit it &nbsp; <a href="https://lista-de-tareas.blogspot.com/"
+      target="_blank" rel="noopener noreferrer">here</a>.</p>`,
+    },
+    {
+      title: "Supermarket Shopping Calculator App Website - Spanish",
+      image: supermarketCalc,
+      content:
+        "A website that can help people calculating the accumulated cost of what they shop at the Supermarket without downloading an app.",
+      modalContent: `
+      <p>A website built on Blogger using HTML, CSS, and JavaScript and it is totally responsive!. The website uses localStorage, which means that the data the users save, will be stored in their devices.</p>
+      <p>It helps people to calculate the total approximate cost of their shopping at the supermarket before paying. You can visit it &nbsp; <a href="https://cuenta-del-super.blogspot.com/"
       target="_blank" rel="noopener noreferrer">here</a>.</p>`,
     },
   ];
@@ -204,7 +215,7 @@ const Projects = () => {
                 />
                 <Card.Body>
                   <Card.Title>{card.title}</Card.Title>
-                  <Card.Text>{card.content}</Card.Text>
+                  <Card.Text className="text-justify">{card.content}</Card.Text>
                   <Button
                     variant="primary"
                     onClick={() =>
