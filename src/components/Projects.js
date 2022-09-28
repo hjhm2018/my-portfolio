@@ -139,7 +139,7 @@ const Projects = () => {
         "A website that can help people to write down what they want to shop at the Supermarket without downloading an app.",
       modalContent: `
       <p>A website built on Blogger using HTML, CSS, and JavaScript and it is totally responsive!. The website uses localStorage, which means that the data the users save, will be stored in their devices.</p>
-      <p>It helps people to make a list of the products they want to shop at the supermarket and track their progress. You can visit it &nbsp; <a href="https://cuenta-del-super.blogspot.com/"
+      <p>It helps people to make a list of the products they want to shop at the supermarket and track their progress. You can visit it &nbsp; <a href="https://lista-compras.blogspot.com/"
       target="_blank" rel="noopener noreferrer">here</a>.</p>`,
     },
   ];
