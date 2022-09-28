@@ -10,6 +10,7 @@ import lists from "../images/lists.png";
 import comparador from "../images/comparador.png";
 import listadetareas from "../images/listadetareas.png";
 import supermarketCalc from "../images/supermarketCalc.png";
+import supermarketList from "../images/supermarketList.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -129,6 +130,16 @@ const Projects = () => {
       modalContent: `
       <p>A website built on Blogger using HTML, CSS, and JavaScript and it is totally responsive!. The website uses localStorage, which means that the data the users save, will be stored in their devices.</p>
       <p>It helps people to calculate the total approximate cost of their shopping at the supermarket before paying. You can visit it &nbsp; <a href="https://cuenta-del-super.blogspot.com/"
+      target="_blank" rel="noopener noreferrer">here</a>.</p>`,
+    },
+    {
+      title: "Supermarket Shopping List App Website - Spanish",
+      image: supermarketList,
+      content:
+        "A website that can help people to write down what they want to shop at the Supermarket without downloading an app.",
+      modalContent: `
+      <p>A website built on Blogger using HTML, CSS, and JavaScript and it is totally responsive!. The website uses localStorage, which means that the data the users save, will be stored in their devices.</p>
+      <p>It helps people to make a list of the products they want to shop at the supermarket and track their progress. You can visit it &nbsp; <a href="https://cuenta-del-super.blogspot.com/"
       target="_blank" rel="noopener noreferrer">here</a>.</p>`,
     },
   ];
