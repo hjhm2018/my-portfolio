@@ -59,8 +59,7 @@ const Projects = () => {
         "An app published at Google Play with the most common petrophysics equations used in the oil and gas industry.",
       modalContent: `
       <p>An app built using Unity and C#.</p>
-      <p>Ideal for petrophysicists, petroleum geologists, petroleum engineer, geoscientists and geology or earth sciences students. You can download from the Google Play store <a href="https://play.google.com/store/apps/details?id=com.Henry.PetrophysicsCalculator"
-      target="_blank" rel="noopener noreferrer">here</a>.</p>`,
+      <p>Ideal for petrophysicists, petroleum geologists, petroleum engineer, geoscientists and geology or earth sciences students. NO LONGER AVAILABLE FOR THE MOMENT AT THE GOOGLE PLAYSTORE`,
     },
     {
       title: "Impactraction Landing Page",
