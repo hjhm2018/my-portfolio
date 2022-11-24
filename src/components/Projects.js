@@ -254,7 +254,7 @@ const Projects = () => {
         </Modal.Footer>
       </Modal>
 
-      <div className="col-lg-12 mt-5 text-center">
+      <div className="col-lg-12 mt-5 text-center px-0">
         <p>
           You can also take a look at my GitHub repositories:{" "}
           <a
@@ -287,7 +287,7 @@ const Projects = () => {
             .map((link, index) => (
               <Nav.Link
                 key={index}
-                className="btn btn-primary mb-2 col-10 col-md-4 mx-auto"
+                className="btn btn-primary mb-2 col-12 col-md-4 mx-auto"
                 as={Link}
                 to={`/projects/${link.url}`}
                 eventKey={2}
