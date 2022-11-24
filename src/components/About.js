@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import { BiUserCircle } from "react-icons/bi";
 
 function About() {
   let [show, setShow] = useState(true);
@@ -22,7 +23,8 @@ function About() {
       <div className="row">
         <div className="col-lg-12">
           <h1 className="text-center mt-2 bg-dark p-2 rounded text-white">
-            About
+            About &nbsp;
+            <BiUserCircle />
           </h1>
         </div>
         <div className="col-lg-2"></div>
