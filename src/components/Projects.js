@@ -287,7 +287,7 @@ const Projects = () => {
             .map((link, index) => (
               <Nav.Link
                 key={index}
-                className="btn btn-primary mb-2 col-8 col-md-4 mx-auto"
+                className="btn btn-primary mb-2 col-10 col-md-4 mx-auto"
                 as={Link}
                 to={`/projects/${link.url}`}
                 eventKey={2}
