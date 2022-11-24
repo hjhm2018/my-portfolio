@@ -4,6 +4,12 @@ import image2 from "../images/henry2.jpeg";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { FaUserGraduate } from "react-icons/fa";
+import { MdWork } from "react-icons/md";
+import { AiOutlineFolderOpen } from "react-icons/ai";
+import { RiContactsBookLine } from "react-icons/ri";
+import { GoDeviceDesktop } from "react-icons/go";
+import "../App.css";
 
 function Home() {
   return (
@@ -13,8 +19,8 @@ function Home() {
         <title>Home</title>
         <meta name="description" content="Home Page" />
       </Helmet>
-      <h1 className="text-center bg-dark text-light rounded mt-2">
-        Henry Herrera - Web Developer
+      <h1 className="text-center bg-dark text-light rounded mt-2 homeTitle">
+        Henry Herrera - Web Developer &nbsp; <GoDeviceDesktop />
       </h1>
       <Card>
         <div className="row">
@@ -60,7 +66,8 @@ function Home() {
             to="/education"
             eventKey={2}
           >
-            Education
+            Education &nbsp;
+            <FaUserGraduate />
           </Nav.Link>
         </div>
         <div className="col-sm-12 col-md-3 mb-1">
@@ -70,7 +77,8 @@ function Home() {
             to="/experience"
             eventKey={2}
           >
-            Experience
+            Experience &nbsp;
+            <MdWork />
           </Nav.Link>
         </div>
         <div className="col-sm-12 col-md-3 mb-1">
@@ -80,7 +88,8 @@ function Home() {
             to="/projects"
             eventKey={2}
           >
-            Projects
+            Projects &nbsp;
+            <AiOutlineFolderOpen />
           </Nav.Link>
         </div>
         <div className="col-sm-12 col-md-3 mb-5">
@@ -90,7 +99,8 @@ function Home() {
             to="/contact"
             eventKey={2}
           >
-            Contact
+            Contact &nbsp;
+            <RiContactsBookLine />
           </Nav.Link>
         </div>
       </div>
