@@ -19,7 +19,7 @@ function Home() {
         <title>Home</title>
         <meta name="description" content="Home Page" />
       </Helmet>
-      <h1 className="text-center bg-dark text-light rounded mt-2 homeTitle">
+      <h1 className="text-center bg-dark text-light rounded mt-2 homeTitle py-2">
         Henry Herrera - Web Developer &nbsp; <GoDeviceDesktop />
       </h1>
       <Card>
@@ -30,20 +30,20 @@ function Home() {
           <div className="col-md-8">
             <Card.Body>
               <Card.Title>Hello!</Card.Title>
-              <Card.Text className="pt-3">
+              <Card.Text className="pt-3 text-justify">
                 My name is Henry Herrera, I'm a web developer and this is my
                 portfolio!
               </Card.Text>
-              <Card.Text>
+              <Card.Text className="text-justify">
                 I just graduated from a Web and Mobile Development Co-Op program
                 at Cornerstone International Community College of Canada in
                 Vancouver.
               </Card.Text>
-              <Card.Text>
+              <Card.Text className="text-justify">
                 I am currently looking for a full-time position as a Web
                 Developer!
               </Card.Text>
-              <Card.Text className="mb-5">
+              <Card.Text className="mb-5 text-justify">
                 If you know about an opportunity, please reach out to me!
               </Card.Text>
               <Nav.Link

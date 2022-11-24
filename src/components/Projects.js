@@ -14,6 +14,7 @@ import supermarketList from "../images/supermarketList.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { AiOutlineFolderOpen } from "react-icons/ai";
 
 const Projects = () => {
   const [modalContent, setModalContent] = useState({
@@ -207,7 +208,9 @@ const Projects = () => {
         <title>Projects</title>
         <meta name="description" content="Projects Page" />
       </Helmet>
-      <h1 className="text-center">Projects</h1>
+      <h1 className="text-center bg-dark p-2 rounded text-white">
+        Projects <AiOutlineFolderOpen />{" "}
+      </h1>
       <CardGroup className="mb-5 d-flex justify-content-around">
         <div className="row justify-content-center">
           {cards &&

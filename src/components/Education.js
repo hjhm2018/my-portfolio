@@ -8,6 +8,7 @@ import uhImage from "../images/uh.png";
 import ubaImage from "../images/uba.png";
 import cornerstoneImage from "../images/cornerstone.png";
 import { Helmet } from "react-helmet";
+import { FaUserGraduate } from "react-icons/fa";
 
 function Education() {
   return (
@@ -17,7 +18,9 @@ function Education() {
         <title>Education</title>
         <meta name="description" content="Education Page" />
       </Helmet>
-      <h1 className="text-center">Education</h1>
+      <h1 className="text-center bg-dark p-2 rounded text-white">
+        Education <FaUserGraduate />
+      </h1>
       <Accordion defaultActiveKey="0">
         <Card>
           <Card.Header className="bg-dark">

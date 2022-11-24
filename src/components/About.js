@@ -21,7 +21,9 @@ function About() {
       </Helmet>
       <div className="row">
         <div className="col-lg-12">
-          <h1 className="text-center">About</h1>
+          <h1 className="text-center mt-2 bg-dark p-2 rounded text-white">
+            About
+          </h1>
         </div>
         <div className="col-lg-2"></div>
         <div className="col-lg-8 text-center font-italic mt-3 mb-3">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import { MdWork } from "react-icons/md";
 
 import styles from "../Experience.module.css";
 
@@ -46,16 +47,18 @@ function Experience() {
         <title>Experience</title>
         <meta name="description" content="Experience Page" />
       </Helmet>
-      <h1 className="text-center mb-4">Experience</h1>
+      <h1 className="text-center mb-4 bg-dark p-2 rounded text-white">
+        Experience <MdWork />
+      </h1>
 
       <div className="col-12 text-center">
-        <button className={`${styles.button}`} onClick={() => setId(1)}>
+        <button className={`${styles.button} m-2`} onClick={() => setId(1)}>
           Software Specialist
         </button>
-        <button className={`${styles.button}`} onClick={() => setId(2)}>
+        <button className={`${styles.button} m-2`} onClick={() => setId(2)}>
           Intern
         </button>
-        <button className={`${styles.button}`} onClick={() => setId(3)}>
+        <button className={`${styles.button} m-2`} onClick={() => setId(3)}>
           Lecturer Assistant
         </button>
       </div>
@@ -69,8 +72,8 @@ function Experience() {
                   <p className="font-weight-bold">{experience.company}</p>
                   <hr />
                   <ul>
-                    {experience.description.map((description) => {
-                      return <li>{description}</li>;
+                    {experience.description.map((description, index) => {
+                      return <li key={index}>{description}</li>;
                     })}
                   </ul>
                 </div>

@@ -4,6 +4,7 @@ import { Card, Button } from "react-bootstrap";
 import image from "../images/linkedin.jpeg";
 import { AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 import { Helmet } from "react-helmet";
+import { RiContactsBookLine } from "react-icons/ri";
 
 function Contact() {
   const [showForm, setshowForm] = useState(false);
@@ -27,7 +28,9 @@ function Contact() {
         <ContactForm hide={buttonHide} className="m-5" />
       ) : (
         <div>
-          <h1 className="text-center">Contact</h1>
+          <h1 className="text-center mt-2 bg-dark p-2 rounded text-white">
+            Contact <RiContactsBookLine />
+          </h1>
           <div className="d-flex justify-content-center mt-2 mb-4">
             <Card className="text-center" style={{ width: "18rem" }}>
               <Card.Img variant="top" src={image} />
@@ -55,7 +58,7 @@ function Contact() {
           <div className="col-lg-12 mt-1 mb-5 text-center">
             <button
               onClick={buttonShow}
-              class="btn btn-success font-weight-bold"
+              className="btn btn-success font-weight-bold"
             >
               Send a message <AiOutlineMail />
             </button>
