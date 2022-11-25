@@ -13,13 +13,13 @@ import "../App.css";
 
 function Home() {
   return (
-    <div className="col-md-8 mx-auto mt-3 mb-5">
+    <div className="col-md-8 mx-auto mt-2 mb-5">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Home</title>
         <meta name="description" content="Home Page" />
       </Helmet>
-      <h1 className="text-center bg-dark text-light rounded mt-2 homeTitle py-2">
+      <h1 className="text-center bg-dark text-light rounded mt-1 homeTitle py-2">
         Henry Herrera - Web Developer &nbsp; <GoDeviceDesktop />
       </h1>
       <Card>

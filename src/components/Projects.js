@@ -208,9 +208,12 @@ const Projects = () => {
         <title>Projects</title>
         <meta name="description" content="Projects Page" />
       </Helmet>
-      <h1 className="text-center bg-dark p-2 rounded text-white">
-        Projects <AiOutlineFolderOpen />{" "}
-      </h1>
+
+      <div className="col-12 col-md-8 mx-auto">
+        <h1 className="text-center bg-dark p-2 rounded text-white">
+          Projects <AiOutlineFolderOpen />{" "}
+        </h1>
+      </div>
       <CardGroup className="mb-5 d-flex justify-content-around">
         <div className="row justify-content-center">
           {cards &&

@@ -21,14 +21,15 @@ function About() {
         <meta name="description" content="About Page" />
       </Helmet>
       <div className="row">
-        <div className="col-lg-12">
-          <h1 className="text-center mt-2 bg-dark p-2 rounded text-white">
+        <div className="col-12 col-md-10 mx-auto">
+          <h1 className="text-center mt-2 bg-dark p-2 rounded text-white ">
             About &nbsp;
             <BiUserCircle />
           </h1>
         </div>
-        <div className="col-lg-2"></div>
-        <div className="col-lg-8 text-center font-italic mt-3 mb-3">
+      </div>
+      <div class="row">
+        <div className="col-12 col-md-10 text-center font-italic mt-3 mb-3 mx-auto">
           <p>
             My name is Henry Herrera, and I am a geological engineer turned web
             developer. I have a masters in geology and a postgraduate diploma in
@@ -74,34 +75,35 @@ function About() {
             .
           </p>
         </div>
-        <div className="col-lg-2"></div>
-        <div className="col-lg-12 text-center mb-2">
-          <p>You can take a look at my resume:</p>
-
-          {show ? (
-            <button onClick={showResume} className="btn btn-info">
-              Show Resume
-            </button>
-          ) : (
-            <button onClick={hideResume} className="btn btn-danger">
-              Hide Resume
-            </button>
-          )}
-        </div>
+      </div>
+      <div className="col-lg-2"></div>
+      <div className="col-lg-12 text-center mb-2">
+        <p>You can take a look at my resume:</p>
 
         {show ? (
-          ""
+          <button onClick={showResume} className="btn btn-info">
+            Show Resume
+          </button>
         ) : (
-          <div className="col-12 col-sm-12 col-lg-10 text-center mx-auto mb-5">
-            <iframe
-              title="Resume"
-              width="100%"
-              height="480"
-              src="https://drive.google.com/file/d/10g4qSpBU_2YSiSpF5Z0ismYxWjrpaaBI/preview"
-            ></iframe>
-          </div>
+          <button onClick={hideResume} className="btn btn-danger">
+            Hide Resume
+          </button>
         )}
       </div>
+
+      {show ? (
+        ""
+      ) : (
+        <div className="col-12 col-sm-12 col-lg-10 text-center mx-auto mb-5">
+          <iframe
+            title="Resume"
+            width="100%"
+            height="480"
+            src="https://drive.google.com/file/d/10g4qSpBU_2YSiSpF5Z0ismYxWjrpaaBI/preview"
+          ></iframe>
+        </div>
+      )}
+
       <div className="pb-5 mt-5 mb-5 invisible">
         This is an invisible container
       </div>

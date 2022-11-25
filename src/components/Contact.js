@@ -28,9 +28,11 @@ function Contact() {
         <ContactForm hide={buttonHide} className="m-5" />
       ) : (
         <div>
-          <h1 className="text-center mt-2 bg-dark p-2 rounded text-white">
-            Contact <RiContactsBookLine />
-          </h1>
+          <div className="col-12 col-md-10 mx-auto">
+            <h1 className="text-center mt-2 bg-dark p-2 rounded text-white">
+              Contact <RiContactsBookLine />
+            </h1>
+          </div>
           <div className="d-flex justify-content-center mt-2 mb-4">
             <Card className="text-center" style={{ width: "18rem" }}>
               <Card.Img variant="top" src={image} />
