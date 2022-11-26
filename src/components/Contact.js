@@ -28,8 +28,8 @@ function Contact() {
         <ContactForm hide={buttonHide} className="m-5" />
       ) : (
         <div>
-          <div className="col-12 col-md-10 mx-auto">
-            <h1 className="text-center mt-2 bg-dark p-2 rounded text-white">
+          <div className="col-12 col-md-11 mx-auto px-md-4">
+            <h1 className="text-center mt-2 bg-dark py-2 rounded text-white">
               Contact <RiContactsBookLine />
             </h1>
           </div>

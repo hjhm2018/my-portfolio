@@ -209,8 +209,8 @@ const Projects = () => {
         <meta name="description" content="Projects Page" />
       </Helmet>
 
-      <div className="col-12 col-md-8 mx-auto">
-        <h1 className="text-center bg-dark p-2 rounded text-white">
+      <div className="col-12 col-md-9 mx-auto px-md-5">
+        <h1 className="text-center bg-dark py-2 rounded text-white">
           Projects <AiOutlineFolderOpen />{" "}
         </h1>
       </div>
