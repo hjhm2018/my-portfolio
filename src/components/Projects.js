@@ -228,6 +228,7 @@ const Projects = () => {
                   variant="top"
                   src={card.image}
                   height={250}
+                  width={250}
                 />
                 <Card.Body>
                   <Card.Title>{card.title}</Card.Title>
